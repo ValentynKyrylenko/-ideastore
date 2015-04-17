@@ -19,11 +19,16 @@
                     					<li><?php
                                             					 $body = $article->body;
                                             					 $body = htmlspecialchars_decode($body);
+                                            					 $body = Illuminate\Support\Str::words($body, 5);
                                             					 echo $body;
                                             					 ?></li>
+                                            					 <hr>
                     					@endforeach
                     					</ul>
                     					@endif
+
+
+
                     				</div>
 				</div>
 			</div>
