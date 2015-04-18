@@ -9,8 +9,15 @@ use Illuminate\HttpResponse;
 use App\Http\Controllers\Controller;
 
 
+/**
+ * Class ArticlesController
+ * @package App\Http\Controllers
+ */
 class ArticlesController extends Controller {
 
+    /**
+     *
+     */
     public function __construct()
     {
         $this->middleware('auth', ['only' => 'create']);
@@ -47,8 +54,8 @@ class ArticlesController extends Controller {
 	 */
 	public function store(ArticleRequest $request)
 	{
-        $article = Auth::user()->articles()->create($request->all());
-        $article->tags()->attach($request->input('tag_list'));
+        $this->createArticle($request);
+
         \Session::flash('flash_message','Ваша новая статья сохранена!');
         return redirect ('articles')->with('flash_message');
 	}
@@ -88,6 +95,7 @@ class ArticlesController extends Controller {
     {
 
         $article->update($request->all());
+        $this->syncTags($article, $request->input('tag_list'));
         return redirect ('articles');
 	}
 
@@ -101,5 +109,28 @@ class ArticlesController extends Controller {
 	{
 		//
 	}
+
+    /**
+     * @param Article $article
+     * @param ArticleRequest $request
+     */
+    private function syncTags(Article $article, array $tags)
+    {
+        $article->tags()->sync($tags);
+    }
+
+
+    /**
+     * sace a new article
+     * @param ArticleRequest $request
+     * @return mixed
+     */
+    private function createArticle(ArticleRequest $request)
+    {
+        $article = Auth::user()->articles()->create($request->all());
+        $this->syncTags($article, $request->input('tag_list'));
+        return $article;
+
+    }
 
 }
