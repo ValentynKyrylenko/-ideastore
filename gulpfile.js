@@ -21,9 +21,8 @@ elixir(function(mix) {
     ]);
 
     mix.scripts([
-        'libs/jquery.js',
+        'libs/jquery-1.11.2.min.js',
         'libs/bootstrap.min.js',
-        'libs/ckeditor.js',
         'libs/select2.min.js',
         'libs/my_scripts.js',
         'libs/html5shiv.min.js',

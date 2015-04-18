@@ -18,9 +18,6 @@
 
 	<![endif]-->
 	<!--SELECT 2-->
-
-
-
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -74,6 +71,8 @@
 	<!-- Scripts -->
 
     <script type="text/javascript" src="{{ URL::asset('/js/all.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('/ckeditor/ckeditor.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('/ckeditor/adapters/jquery.js') }}"></script>
 
 </body>
 </html>
