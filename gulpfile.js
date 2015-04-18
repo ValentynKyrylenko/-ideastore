@@ -14,6 +14,7 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss','resources/css');
     mix.styles([
+        'libs/normalize.css',
         'libs/bootstrap.min.css',
         'libs/select2.min.css',
         'app.css'
