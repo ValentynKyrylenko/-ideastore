@@ -13,6 +13,9 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
+
+Route::get('tags/{tags}', 'TagsController@show');
 
 
 Route::resource('articles', 'ArticlesController');

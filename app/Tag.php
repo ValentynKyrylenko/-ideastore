@@ -8,9 +8,9 @@ class Tag extends Model {
 'name'
 ];
 
-	public function Articles()
+	public function articles()
     {
-        $this->belongsToMany('App\Article');
+        return $this->belongsToMany('App\Article');
     }
 
 }

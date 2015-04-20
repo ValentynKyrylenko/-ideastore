@@ -9,7 +9,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Cоздание статтьи</div>
 				<div class="panel-body">
-				{!! Form::open(['url'=>'articles']) !!}
+				{!! Form::model($article =new \App\Article,['url'=>'articles']) !!}
 @include('articles._form', ['submitButtonText'=>'Создать статью'])
 					{!! Form::close()!!}
 				</div>

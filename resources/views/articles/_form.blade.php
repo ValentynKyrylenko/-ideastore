@@ -12,7 +12,7 @@
                 </div>
                 <div class="form-group">
                 {!! Form::label('published_at', 'Дата публиации') !!}
-                {!! Form::input('date', 'published_at', Carbon::now()->format('d-m-Y'),['class' => 'form-control']) !!}
+                {!! Form::input('date', 'published_at', $article->published_at,['class' => 'form-control']) !!}
                 </div>
                   <div class="form-group">
                                 {!! Form::label('tag_list', 'Рубрика') !!}
