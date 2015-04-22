@@ -1,121 +1,62 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'd:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'd:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install' ]
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   'gulp' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose readDependencies using package.json deps
-5 verbose install where, deps [ 'c:\\xampp\\htdocs\\laravel_1', [ 'gulp', 'laravel-elixir' ] ]
-6 info preinstall @
-7 verbose readDependencies using package.json deps
-8 verbose cache add [ 'gulp@^3.8.8', null ]
-9 verbose cache add name=undefined spec="gulp@^3.8.8" args=["gulp@^3.8.8",null]
-10 verbose parsed url { protocol: null,
-10 verbose parsed url   slashes: null,
-10 verbose parsed url   auth: null,
-10 verbose parsed url   host: null,
-10 verbose parsed url   port: null,
-10 verbose parsed url   hostname: null,
-10 verbose parsed url   hash: null,
-10 verbose parsed url   search: null,
-10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: 'gulp@^3.8.8',
-10 verbose parsed url   path: 'gulp@^3.8.8',
-10 verbose parsed url   href: 'gulp@^3.8.8' }
-11 verbose cache add [ 'laravel-elixir@*', null ]
-12 verbose cache add name=undefined spec="laravel-elixir@*" args=["laravel-elixir@*",null]
-13 verbose parsed url { protocol: null,
-13 verbose parsed url   slashes: null,
-13 verbose parsed url   auth: null,
-13 verbose parsed url   host: null,
-13 verbose parsed url   port: null,
-13 verbose parsed url   hostname: null,
-13 verbose parsed url   hash: null,
-13 verbose parsed url   search: null,
-13 verbose parsed url   query: null,
-13 verbose parsed url   pathname: 'laravel-elixir@*',
-13 verbose parsed url   path: 'laravel-elixir@*',
-13 verbose parsed url   href: 'laravel-elixir@*' }
-14 verbose cache add name="gulp" spec="^3.8.8" args=["gulp","^3.8.8"]
-15 verbose parsed url { protocol: null,
-15 verbose parsed url   slashes: null,
-15 verbose parsed url   auth: null,
-15 verbose parsed url   host: null,
-15 verbose parsed url   port: null,
-15 verbose parsed url   hostname: null,
-15 verbose parsed url   hash: null,
-15 verbose parsed url   search: null,
-15 verbose parsed url   query: null,
-15 verbose parsed url   pathname: '^3.8.8',
-15 verbose parsed url   path: '^3.8.8',
-15 verbose parsed url   href: '^3.8.8' }
-16 verbose addNamed [ 'gulp', '^3.8.8' ]
-17 verbose addNamed [ null, '>=3.8.8-0 <4.0.0-0' ]
-18 verbose cache add name="laravel-elixir" spec="*" args=["laravel-elixir","*"]
-19 verbose parsed url { protocol: null,
-19 verbose parsed url   slashes: null,
-19 verbose parsed url   auth: null,
-19 verbose parsed url   host: null,
-19 verbose parsed url   port: null,
-19 verbose parsed url   hostname: null,
-19 verbose parsed url   hash: null,
-19 verbose parsed url   search: null,
-19 verbose parsed url   query: null,
-19 verbose parsed url   pathname: '*',
-19 verbose parsed url   path: '*',
-19 verbose parsed url   href: '*' }
-20 verbose addNamed [ 'laravel-elixir', '*' ]
-21 verbose addNamed [ null, '*' ]
-22 silly lockFile ed47fb09-gulp-3-8-8 gulp@^3.8.8
-23 verbose lock gulp@^3.8.8 C:\Users\kyrylenko\AppData\Roaming\npm-cache\ed47fb09-gulp-3-8-8.lock
-24 silly lockFile 84c72bf4-laravel-elixir laravel-elixir@*
-25 verbose lock laravel-elixir@* C:\Users\kyrylenko\AppData\Roaming\npm-cache\84c72bf4-laravel-elixir.lock
-26 silly addNameRange { name: 'gulp', range: '>=3.8.8-0 <4.0.0-0', hasData: false }
-27 verbose request where is /gulp
-28 verbose request registry https://registry.npmjs.org/
-29 verbose request id df57608c6f6b3991
-30 verbose url raw /gulp
-31 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
-32 verbose url resolved https://registry.npmjs.org/gulp
-33 verbose request where is https://registry.npmjs.org/gulp
-34 info trying registry request attempt 1 at 14:14:25
-35 http GET https://registry.npmjs.org/gulp
-36 silly addNameRange { name: 'laravel-elixir', range: '*', hasData: false }
-37 verbose request where is /laravel-elixir
-38 verbose request registry https://registry.npmjs.org/
-39 verbose url raw /laravel-elixir
-40 verbose url resolving [ 'https://registry.npmjs.org/', './laravel-elixir' ]
-41 verbose url resolved https://registry.npmjs.org/laravel-elixir
-42 verbose request where is https://registry.npmjs.org/laravel-elixir
-43 info trying registry request attempt 1 at 14:14:25
-44 http GET https://registry.npmjs.org/laravel-elixir
-45 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
-46 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
-47 info trying registry request attempt 2 at 14:14:35
-48 http GET https://registry.npmjs.org/gulp
-49 info trying registry request attempt 2 at 14:14:35
-50 http GET https://registry.npmjs.org/laravel-elixir
-51 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
-52 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
-53 info trying registry request attempt 3 at 14:15:36
-54 http GET https://registry.npmjs.org/gulp
-55 info trying registry request attempt 3 at 14:15:36
-56 http GET https://registry.npmjs.org/laravel-elixir
-57 silly lockFile ed47fb09-gulp-3-8-8 gulp@^3.8.8
-58 silly lockFile ed47fb09-gulp-3-8-8 gulp@^3.8.8
-59 silly lockFile 84c72bf4-laravel-elixir laravel-elixir@*
-60 silly lockFile 84c72bf4-laravel-elixir laravel-elixir@*
-61 error network tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
-61 error network This is most likely not a problem with npm itself
-61 error network and is related to network connectivity.
-61 error network In most cases you are behind a proxy or have bad network settings.
-61 error network
-61 error network If you are behind a proxy, please make sure that the
-61 error network 'proxy' config is set properly.  See: 'npm help config'
-62 error System Windows_NT 6.1.7601
-63 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-64 error cwd c:\xampp\htdocs\laravel_1
-65 error node -v v0.10.33
-66 error npm -v 1.4.28
-67 error code ECONNRESET
-68 verbose exit [ 1, true ]
+4 verbose cache add [ 'gulp', null ]
+5 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'gulp',
+6 verbose parsed url   path: 'gulp',
+6 verbose parsed url   href: 'gulp' }
+7 silly lockFile 9750c68d-gulp gulp
+8 verbose lock gulp C:\Users\kyrylenko\AppData\Roaming\npm-cache\9750c68d-gulp.lock
+9 silly lockFile 9750c68d-gulp gulp
+10 silly lockFile 9750c68d-gulp gulp
+11 verbose addNamed [ 'gulp', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 72f4391e-gulp gulp@
+14 verbose lock gulp@ C:\Users\kyrylenko\AppData\Roaming\npm-cache\72f4391e-gulp.lock
+15 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+16 verbose request where is /gulp
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id b3ac9712c27dabe4
+19 verbose url raw /gulp
+20 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+21 verbose url resolved https://registry.npmjs.org/gulp
+22 verbose request where is https://registry.npmjs.org/gulp
+23 info trying registry request attempt 1 at 15:43:51
+24 http GET https://registry.npmjs.org/gulp
+25 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
+26 info trying registry request attempt 2 at 15:44:01
+27 http GET https://registry.npmjs.org/gulp
+28 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
+29 info trying registry request attempt 3 at 15:45:01
+30 http GET https://registry.npmjs.org/gulp
+31 silly lockFile 72f4391e-gulp gulp@
+32 silly lockFile 72f4391e-gulp gulp@
+33 error network tunneling socket could not be established, cause=getaddrinfo ENOTFOUND
+33 error network This is most likely not a problem with npm itself
+33 error network and is related to network connectivity.
+33 error network In most cases you are behind a proxy or have bad network settings.
+33 error network
+33 error network If you are behind a proxy, please make sure that the
+33 error network 'proxy' config is set properly.  See: 'npm help config'
+34 error System Windows_NT 6.1.7601
+35 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--global" "gulp"
+36 error cwd c:\xampp\htdocs\laravel_1
+37 error node -v v0.10.33
+38 error npm -v 1.4.28
+39 error code ECONNRESET
+40 verbose exit [ 1, true ]

@@ -16,6 +16,7 @@ elixir(function(mix) {
     mix.styles([
         'libs/normalize.css',
         'libs/bootstrap.min.css',
+        'libs/bootstrap-theme.min.css',
         'libs/select2.min.css',
         'app.css'
 
