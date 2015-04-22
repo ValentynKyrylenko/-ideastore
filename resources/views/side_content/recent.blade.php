@@ -1,6 +1,6 @@
 <div class="col-md-4"> <div class="panel panel-info">
  <div class="panel-heading">
-     <h3 class="panel-title">Последние публикации</h3>
+     <i class="fa fa-bell fa-2x" class="panel-title">  Последние публикации</i>
  </div>
  <div class="panel-body">
 

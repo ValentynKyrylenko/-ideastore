@@ -2,7 +2,7 @@
 
 			<div class="footer-left">
 
-				<h3>Лого<span>компании ideastore.com.us</span></h3>
+				<h3>Лого<span>ideastore.com.us</span></h3>
 
 				<p class="footer-links">
 					<a href="#">Дом</a>
