@@ -50,23 +50,23 @@
                        <div class="row">
                                    <div class="col-md-4"> <div class="panel panel-info">
                                                                  <div class="panel-heading">
-                                                                     <h3 class="panel-title">100 Continue</h3>
+                                                                     <h3 class="panel-title">Рубрики</h3>
                                                                  </div>
-                                                                 <div class="panel-body">The client should continue with its request.</div>
+                                                                 <div class="panel-body">Здесь будут размещены рукрика, перейдя по которым, пользователь сможет просмотреть все статьи.</div>
                                                              </div></div> <!--1 Block END-->
 
                                    <div class="col-md-4"> <div class="panel panel-info">
                                                                  <div class="panel-heading">
-                                                                     <h3 class="panel-title">100 Continue</h3>
+                                                                     <h3 class="panel-title">Последние публикации</h3>
                                                                  </div>
-                                                                 <div class="panel-body">The client should continue with its request.</div>
+                                                                 <div class="panel-body">Здесь будет размещён список последних публикаций.</div>
                                                              </div></div> <!--2 Block END-->
 
                                    <div class="col-md-4"> <div class="panel panel-info">
                                                                  <div class="panel-heading">
-                                                                     <h3 class="panel-title">100 Continue</h3>
+                                                                     <h3 class="panel-title">Наши друзья</h3>
                                                                  </div>
-                                                                 <div class="panel-body">The client should continue with its request.</div>
+                                                                 <div class="panel-body">Здесь будут ссылки или баннеры на партнёрские сайты.</div>
                                                              </div></div> <!--3 Block END-->
                        </div>
             </div> <!--Body site main contents-->
