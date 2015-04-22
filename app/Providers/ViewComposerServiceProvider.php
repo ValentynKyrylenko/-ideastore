@@ -46,7 +46,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
     private function composeRecent()
     {
         view()->composer('side_content.recent', function ($view) {
-            $view->with('latest_articles', Article::orderBy('created_at', 'DESC')->take(10)->get());
+            $view->with('latest_articles', Article::orderBy('created_at', 'DESC')->published()->take(10)->get());
         });
     }
 
