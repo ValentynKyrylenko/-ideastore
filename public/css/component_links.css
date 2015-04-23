@@ -1,7 +1,7 @@
 /* Effect 1: Brackets */
 /* unvisited link */
 
-
+A:link {color: #333333}
 .cl-effect-1 a::before,
 .cl-effect-1 a::after {
 	display: inline-block;

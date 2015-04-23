@@ -107,7 +107,10 @@ font-family: 'Lato';
 		padding: 0 0 0 0;
                 font-weight: 100;}
 
-
+a:link {color: #CA6924; text-decoration: underline; }
+a:active {color: #8DB255; text-decoration: underline; }
+a:visited {color: #95A5A6; text-decoration: underline; }
+a:hover {color: #757D75; text-decoration: none; }
 	</style>
 
 </head>
