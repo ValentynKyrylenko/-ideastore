@@ -28,6 +28,7 @@
 	<!--[if lt IE 9]>
 	<![endif]-->
 	<!--SELECT 2-->
+	<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 	<style>
 	body {
@@ -41,6 +42,71 @@
         height:1px; /* высота 1px IE, Firefox, Opera, Safari */
         clear:both; /* для очистки, если тег идет после float елемента */
     }
+.slick-slide {
+    text-align: center;
+}
+
+.slick-slide::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.slick-slide img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: @screen-xs) {
+    body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+    body{font-size: 14px;}
+}
+
+
+h5{
+    font-size: 1.4em;
+}
+
+.ideastore {
+font-weight: 100;
+font-size: 28px;
+font-family: 'Lato';
+}
+
+
+
+
+		.middle_headline {font-family: times, Times New Roman, times-roman, georgia, serif;
+		font-size: 28px;
+		line-height: 40px;
+		letter-spacing: -1px;color: #444;
+		}
+
+
+
+        .paragraph{font-family: times, Times New Roman, times-roman, georgia, serif;
+		font-size: 14px;
+		line-height: 20px;
+		text-transform: uppercase;
+		color: #444;}
+
+
+
+         .large_headline{     font-family: times, Times New Roman, times-roman, georgia, serif;
+		font-size: 48px;
+	        line-height: 40px;
+	        letter-spacing: -1px;
+		color: #444;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+                font-weight: 100;}
+
+
 	</style>
 
 </head>
@@ -66,7 +132,7 @@
                       </div>
 
 
-                       <div class="row">
+                       <div id="banner_area" class="row">
                                    <div class="col-md-12">
                                       @yield('articles') <!--Contents-->
                                    </div>

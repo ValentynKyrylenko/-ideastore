@@ -43,7 +43,7 @@ $(document).ready(function() {
     }); /** Light Box**/
 
 
-    $('.slick').slick({
+    $('.slick_slide').slick({
         dots: true,
         speed: 500,
         autoplay: true,
