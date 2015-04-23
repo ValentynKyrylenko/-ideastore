@@ -12,6 +12,7 @@
 
 	<link href="{{ asset('/css/all.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/lightbox.css') }}" rel="stylesheet"> <!--LIGHTBOX STYLE-->
+	<link href="{{ asset('/css/component_links.css') }}" rel="stylesheet"> <!--LINKS-->
 
 
 	<link href="{{ asset('/css/footer-distributed-with-address-and-phones.css') }}" rel="stylesheet"><!--FOOTER STYLE-->
