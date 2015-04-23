@@ -7,10 +7,19 @@
 	<meta name="description" content="Ручные изделия">
     <meta name="author" content="Valentyn Kyrylenko">
     <title>Магазин идей</title>
+
+
+
 	<link href="{{ asset('/css/all.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/lightbox.css') }}" rel="stylesheet"> <!--LIGHTBOX STYLE-->
+
+
 	<link href="{{ asset('/css/footer-distributed-with-address-and-phones.css') }}" rel="stylesheet"><!--FOOTER STYLE-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--FOOTER STYLE-->
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -49,6 +58,13 @@
                        {{Session::get('flash_message')}}
                        </div>
                        @endif
+
+                     <div class="row">
+                                  <div class="col-md-12">
+                                     @include('side_content.slick') <!--Slick Carousel-->
+                                  </div>
+                      </div>
+
 
                        <div class="row">
                                    <div class="col-md-12">
