@@ -20,7 +20,6 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-				        <li>{!! link_to_action('ArticlesController@show', $latest->title, [$latest->id]) !!}</li>
 				        <li><a href="{{ url('#') }}">Обратная связь</a></li>
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Вход</a></li>

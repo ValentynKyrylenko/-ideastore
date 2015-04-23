@@ -6,7 +6,7 @@
 
   @foreach($latest_articles as $article)
   <a href="{{action ('ArticlesController@show', [$article->id])}}" class="btn btn-link">{{$article->title}}</a>
-  </br>
+  <hr />
   @endforeach
 
  </div>

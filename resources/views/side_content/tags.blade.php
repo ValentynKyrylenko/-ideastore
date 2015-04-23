@@ -7,7 +7,7 @@
 
                  @foreach($tags as $tag)
                  <a href="{{action ('TagsController@show', [$tag->name])}}" class="btn btn-link ">{{$tag->name}}</a>
-                 </br>
+                 <hr />
                  @endforeach
 
              </div>

@@ -23,8 +23,17 @@
 	<style>
 	body {
         margin-top: 35px;
+        background-image: url('http://localhost/laravel_1/public/media/background_images/paisley.png');
+    }
+    hr {
+        color: #bdc3c7; /*для IE */
+        background-color:#bdc3c7; /*для Firefox, Opera, Safari*/
+        border:0px none;
+        height:1px; /* высота 1px IE, Firefox, Opera, Safari */
+        clear:both; /* для очистки, если тег идет после float елемента */
     }
 	</style>
+
 </head>
 
 
