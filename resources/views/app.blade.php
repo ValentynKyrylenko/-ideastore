@@ -15,6 +15,7 @@
 	<link href="{{ asset('/css/component_links.css') }}" rel="stylesheet"> <!--LINKS-->
 
 
+
 	<link href="{{ asset('/css/footer-distributed-with-address-and-phones.css') }}" rel="stylesheet"><!--FOOTER STYLE-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--FOOTER STYLE-->

@@ -1,7 +1,7 @@
 @extends('app')
 @section('articles')
  <div class="panel panel-default">
-	   <div class="panel-heading">Статьи</div>
+	   <div class="panel-heading"><h3>Статьи</h3></div>
 					<div class="panel-body">
                     					@if (count($articles))
                     					<ul>
@@ -20,6 +20,7 @@
 
                                          </div>
                                          </div>
+
                                          </div> <!--2 Block END-->
                     					<!------------------------------------------------------------->
 
@@ -30,6 +31,7 @@
                     					@endforeach
                     					</ul>
                     					@endif
+
 			        </div>
 
  </div>
