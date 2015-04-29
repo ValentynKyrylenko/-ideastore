@@ -51,6 +51,7 @@ $(document).ready(function() {
         fade: true,
         cssEase: 'linear'
     });
+    $('div.alert').delay(2500).slideUp(300);/** Flash massege**/
 
 
 
