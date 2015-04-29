@@ -36,8 +36,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Article');
     }
 
-    public function IsManager()
+    public function IsAdmin()
     {
+        if ( $this->email=='valentynmail@gmail.com') {
+            return true;
+        }
         return false;
     }
 

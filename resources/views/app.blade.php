@@ -123,10 +123,10 @@ a:hover {color: #757D75; text-decoration: none; }
            </header>
 
             <div id ='body' class="container"> <!--Body site main contents-->
-                       @if (Session::has('flash_message'))
-                       <div class="alert alert-success">
+                       @if (Session::has('message'))
+                       <div class="alert alert-info">
                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       {{Session::get('flash_message')}}
+                       {{Session::get('message')}}
                        </div>
                        @endif
 
