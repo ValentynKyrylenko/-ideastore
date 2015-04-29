@@ -56,9 +56,8 @@ class ArticlesController extends Controller {
 	public function store(ArticleRequest $request)
 	{
         $this->createArticle($request);
-
-        \Session::flash('flash_message','Ваша новая статья сохранена!');
-        return redirect ('articles')->with('flash_message');
+        \Session::flash('message','Ваша новая статья сохранена!');
+        return redirect('articles');
 	}
 
 	/**
