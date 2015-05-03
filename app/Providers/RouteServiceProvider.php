@@ -27,6 +27,14 @@ class RouteServiceProvider extends ServiceProvider {
         {
            return \App\Article::published()->findOrFail($id);
         });
+        $router->bind('events', function($id)
+        {
+            return \App\Event::published()->findOrFail($id);
+        });
+        $router->bind('products', function($id)
+        {
+            return \App\Product::published()->findOrFail($id);
+        });
 
         $router->bind('tags', function($name)
         {

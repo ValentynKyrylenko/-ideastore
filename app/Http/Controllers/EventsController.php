@@ -1,6 +1,4 @@
 <?php namespace App\Http\Controllers;
-
-
 use Auth;
 use App\Event;
 use App\Http\Requests;
@@ -26,7 +24,8 @@ class EventsController extends Controller {
 
 	public function index()
 	{
-		//
+        $events = Event::latest('published_at')->published()->get();
+        return view ('events.index', compact('events'));
 	}
 
 	/**
@@ -36,7 +35,7 @@ class EventsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        return view ('events.create');
 	}
 
 	/**
@@ -44,9 +43,11 @@ class EventsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Event $event, EventRequest $request)
 	{
-		//
+        \Session::flash('message','Новость сохранена!');
+        $event->create($request->all());
+        return redirect('events');
 	}
 
 	/**
@@ -55,31 +56,22 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(Event $event)
 	{
-		//
+        return view ('events.show', compact('event'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
+
+	public function edit(Event $event)
 	{
-		//
+        return view('events.edit',compact('event'));
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+
+	public function update(Event $event, EventRequest $request)
 	{
-		//
+        $event->update($request->all());
+        return redirect ('events');
 	}
 
 	/**
@@ -92,5 +84,7 @@ class EventsController extends Controller {
 	{
 		//
 	}
+
+
 
 }

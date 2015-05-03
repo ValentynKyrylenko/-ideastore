@@ -19,6 +19,8 @@ Route::get('tags/{tags}', 'TagsController@show');
 
 
 Route::resource('articles', 'ArticlesController');
+Route::resource('events', 'EventsController');
+Route::resource('products', 'ProductsController');
 
 
 Route::controllers([

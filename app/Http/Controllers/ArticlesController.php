@@ -31,7 +31,6 @@ class ArticlesController extends Controller {
 	 */
 	public function index()
 	{
-               // $articles = Article::latest('published_at')->published()->get();
                 $articles = Article::latest('published_at')->published()->get();
                 return view ('articles.index', compact('articles'));
 	}
@@ -65,31 +64,19 @@ class ArticlesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show(Article $article){
-		//
-
+	public function show(Article $article)
+    {
         return view ('articles.show', compact('article'));
-
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function edit(Article $article)	{
 
         $tags = Tag::lists('name', 'id');
         return view('articles.edit',compact('article', 'tags'));
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function update(Article $article, ArticleRequest $request)
     {
 

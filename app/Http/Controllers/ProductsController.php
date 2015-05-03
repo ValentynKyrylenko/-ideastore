@@ -1,6 +1,4 @@
 <?php namespace App\Http\Controllers;
-
-
 use Auth;
 use App\Product;
 use App\Http\Requests;
@@ -26,7 +24,8 @@ class ProductsController extends Controller {
 
 	public function index()
 	{
-		//
+        $products = Product::latest('published_at')->published()->get();
+        return view ('products.index', compact('products'));
 	}
 
 	/**
@@ -36,7 +35,7 @@ class ProductsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        return view ('products.create');
 	}
 
 	/**
@@ -44,10 +43,12 @@ class ProductsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		//
-	}
+    public function store(Product $product, ProductRequest $request)
+    {
+        \Session::flash('message','Ваша работа сохранена!');
+        $product->create($request->all());
+        return redirect('products');
+    }
 
 	/**
 	 * Display the specified resource.
@@ -55,31 +56,22 @@ class ProductsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(Product $product)
 	{
-		//
+        return view ('products.show', compact('product'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
+
+	public function edit(Product $product)
 	{
-		//
+        return view('products.edit',compact('product'));
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+
+	public function update(Product $product, ProductRequest $request)
 	{
-		//
+        $product->update($request->all());
+        return redirect ('products');
 	}
 
 	/**
