@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class ArticleRequest extends Request {
+class CreateProductRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +11,7 @@ class ArticleRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return true;
+        return true;
 	}
 
 	/**
@@ -22,9 +22,9 @@ class ArticleRequest extends Request {
 	public function rules()
 	{
 		return [
-
-
-            
+            'title' => 'required|min:5',
+            'body' => 'required|min:20',
+            'published_at' => 'required|date'
 		];
 	}
 

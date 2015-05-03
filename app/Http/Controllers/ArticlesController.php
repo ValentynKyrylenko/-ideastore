@@ -22,7 +22,6 @@ class ArticlesController extends Controller {
     {
         $this->middleware('auth', ['only' => ['create', 'edit', 'show']]);
         $this->middleware('admin', ['only' => ['create', 'edit']]);
-       // $this->middleware('auth', ['only' => 'create']);
     }
 
 	/**
