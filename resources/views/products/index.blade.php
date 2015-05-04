@@ -1,7 +1,7 @@
 @extends('app')
 @section('articles')
 {!! Breadcrumbs::render('products') !!}
- <div class="panel panel-default">
+ <div class="panel panel-success">
 	   <div class="panel-heading"><h3>Мои авторские работы</h3></div>
 					<div class="panel-body">
                     					@if (count($products))
@@ -9,7 +9,7 @@
                     					@foreach($products as $product)
 
                     					<!------------------------------------------------------------->
-                    					 <div class="col-md-4"> <div class="panel panel-default">
+                    					 <div class="col-md-4"> <div class="panel panel-warning">
                                          <div class="panel-heading">
                                              <a href="{{action ('ProductsController@show', [$product->id])}}">{{$product->title}}</a>
                                          </div>

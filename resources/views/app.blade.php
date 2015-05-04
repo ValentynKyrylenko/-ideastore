@@ -35,7 +35,7 @@
 	<style>
 	body {
         margin-top: 35px;
-        background-image: url('http://localhost/laravel_1/public/media/background_images/color_lovers_1.png');
+        background-color: #EAE1C0;
     }
     hr {
         color: #bdc3c7; /*для IE */
