@@ -35,7 +35,7 @@
 	<style>
 	body {
         margin-top: 35px;
-        background-color: #EAE1C0;
+        background-image: url("http://localhost/laravel_1/public/media/background_images/seamless_paper_texture.png");
     }
     hr {
         color: #bdc3c7; /*для IE */
