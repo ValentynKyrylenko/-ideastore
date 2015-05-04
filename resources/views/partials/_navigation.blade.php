@@ -13,10 +13,15 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}"><i class="fa fa-anchor fa-lg"> Дом</i></a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-briefcase fa-lg"> Работы</i></a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-comment fa-lg"> Идеи</i></a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-bullhorn fa-lg"> Новости</i></a></li>
+					<li><a href="{{ url('/products') }}"><i class="fa fa-briefcase fa-lg"> Авторские работы</i></a></li>
+					<li><a href="{{ url('/articles') }}"><i class="fa fa-comment fa-lg"> Мастер-классы</i></a></li>
+					<li><a href="{{ url('/events') }}"><i class="fa fa-bullhorn fa-lg"> Новости</i></a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-child fa-lg"> Благотворительность</i></a></li>
+
+					<!-------------------------------------ADMIN----------------------------------------------------->
+                                              @include('partials._adminMenu')
+					<!-------------------------------------ADMIN----------------------------------------------------->
+
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -32,6 +37,7 @@
 							</ul>
 						</li>
 					@endif
+
 				</ul>
 			</div>
 		</div>

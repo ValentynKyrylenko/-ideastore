@@ -86,8 +86,8 @@ return [
 	*/
 
 	'custom' => [
-		'attribute-name' => [
-			'rule-name' => 'custom-message',
+		'email' => [
+			'required' => 'Введите поле электронной почты',
 		],
 	],
 

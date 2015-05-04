@@ -1,9 +1,9 @@
                <div class="form-group">
-				{!! Form::label('title', 'Название') !!}
+				{!! Form::label('title', 'Название новости') !!}
 				{!! Form::text('title', null, ['class' => 'form-control']) !!}
 				</div>
 				<div class="form-group">
-                {!! Form::label('body', 'Текст Статьи') !!}
+                {!! Form::label('body', 'Текст новости') !!}
                 {!! Form::textarea('body', null, ['class' => 'form-control', 'id' => 'editor1']) !!}
                 </div>
                 <div class="form-group">

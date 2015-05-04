@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use App\Article;
+use App\Product;
 use App\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
@@ -17,6 +18,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
         $this->composeNavigation();
         $this->composeTags();
         $this->composeRecent();
+        $this->composeProducts();
     }
 
 	/**
@@ -47,6 +49,13 @@ class ViewComposerServiceProvider extends ServiceProvider {
     {
         view()->composer('side_content.recent', function ($view) {
             $view->with('latest_articles', Article::orderBy('created_at', 'DESC')->published()->take(5)->get());
+        });
+    }
+
+    private function composeProducts()
+    {
+        view()->composer('side_content.products', function ($view) {
+            $view->with('latest_products', Product::orderBy('created_at', 'DESC')->published()->take(5)->get());
         });
     }
 

@@ -144,11 +144,23 @@ a:hover {color: #757D75; text-decoration: none; }
                        </div>
 
                        <div class="row">
+                          @include('side_content.products')
                           @include('side_content.tags')
                           @include('side_content.recent')
-                          @include('side_content.links')
                        </div>
+
+                        <div class="row"> <!--BREADCRUMBS-->
+                                     <div class="col-md-12">
+                                                <ol class="breadcrumb">
+                                                  <li><a href="{{ url('/') }}">Home</a></li>
+                                                  <li><a href="{{ url('/') }}">Library</a></li>
+                                                  <li class="active">Data</li>
+                                                </ol>
+                                     </div>
+                         </div>
             </div> <!--Body site main contents-->
+
+
 
 
             <footer><!--Footer contents-->

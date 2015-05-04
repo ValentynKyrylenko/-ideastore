@@ -38,7 +38,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function IsAdmin()
     {
-        if ( $this->email=='valentynmail@gmail.com') {
+        if ( $this->email==env('ADMIN_AUTH_MAIL')) {
             return true;
         }
         return false;
