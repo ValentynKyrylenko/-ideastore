@@ -12,15 +12,15 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('home', 'HomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );
+
 
 Route::get('tags/{tags}', 'TagsController@show');
 
 
-Route::resource('articles', 'ArticlesController');
-Route::resource('events', 'EventsController');
-Route::resource('products', 'ProductsController');
+Route::resource('articles', 'ArticlesController', array('names' => array('index' => 'articles', 'show' => 'show_article')));
+Route::resource('events', 'EventsController', array('names' => array('index' => 'events', 'show' => 'show_event')));
+Route::resource('products', 'ProductsController', array('names' => array('index' => 'products', 'show' => 'show_product')));
 
 
 Route::controllers([

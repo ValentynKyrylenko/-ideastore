@@ -1,5 +1,6 @@
 @extends('app')
 @section('articles')
+{!! Breadcrumbs::render('show_event') !!}
 <div class="panel panel-info">
 				<div class="panel-heading"><h3>{{$event->title}}</h3></div>
                             <div class="panel-body">

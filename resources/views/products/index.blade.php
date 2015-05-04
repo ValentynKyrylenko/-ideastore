@@ -1,5 +1,6 @@
 @extends('app')
 @section('articles')
+{!! Breadcrumbs::render('products') !!}
  <div class="panel panel-default">
 	   <div class="panel-heading"><h3>Мои авторские работы</h3></div>
 					<div class="panel-body">

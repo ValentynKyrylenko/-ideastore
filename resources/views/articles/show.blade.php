@@ -1,5 +1,6 @@
 @extends('app')
 @section('articles')
+{!! Breadcrumbs::render('show_article') !!}
 <div class="panel panel-info">
 				<div class="panel-heading"><h3>{{$article->title}}</h3></div>
 				<div class="panel-body">
