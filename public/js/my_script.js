@@ -54,5 +54,8 @@ $(document).ready(function() {
     $('div.alert').delay(2500).slideUp(300);/** Flash massege**/
 
 
+    $('#editor1' ).ckeditor();
+
+    $('select').select2();
 
 }); /** Document Ready**/

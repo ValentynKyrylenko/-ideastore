@@ -22,11 +22,13 @@ elixir(function(mix) {
     mix.scripts([
         '../assets/bower/jquery/dist/jquery.js',
         'libs/jquery-migrate-1.2.1.min.js',
-        '../../public/ckeditor/ckeditor.js',
-        '../../public/ckeditor/adapters/jquery.js',
         '../assets/bower/bootstrap/dist/js/bootstrap.js',
+        //'../../public/ckeditor/ckeditor.js',
+        //'../../public/ckeditor/adapters/jquery.js',
+        '../../public/js/slick.min.js',
         'libs/select2.min.js',
         'libs/html5shiv.min.js',
-        'libs/respond.min.js'
+        'libs/respond.min.js',
+        '../../public/js/my_script.js'
     ]);
 });
