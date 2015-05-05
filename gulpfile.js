@@ -16,6 +16,11 @@ elixir(function(mix) {
     mix.styles([
         'app.css',
         'libs/bootstrap-theme.min.css',
+        'libs/component_links.css',
+        'libs/lightbox.css',
+        'libs/slick.css',
+        'libs/slick-theme.css',
+        'libs/footer-distributed-with-address-and-phones.css',
         'libs/select2.min.css'
     ]);
 
