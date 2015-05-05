@@ -5,7 +5,12 @@
 
 			<div class="jumbotron">
               <div class="container">
-                Главная страница
+                                  <div class="jambotron_header">
+                                       Главная страница
+                                  </div>
+                          <div class="jambotron_body">
+                                        Здесь размещён текст
+                          </div>
               </div>
             </div>
 @endsection
