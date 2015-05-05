@@ -12,23 +12,21 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss','resources/css');
+    mix.less('app.less','resources/css');
     mix.styles([
-        'libs/normalize.css',
-        'libs/bootstrap.min.css',
+        'app.css',
         'libs/bootstrap-theme.min.css',
-        'libs/select2.min.css',
-        'app.css'
-
+        'libs/select2.min.css'
     ]);
 
     mix.scripts([
-        'libs/jquery-1.11.2.min.js',
-        'libs/bootstrap.min.js',
+        '../assets/bower/jquery/dist/jquery.js',
+        'libs/jquery-migrate-1.2.1.min.js',
+        '../../public/ckeditor/ckeditor.js',
+        '../../public/ckeditor/adapters/jquery.js',
+        '../assets/bower/bootstrap/dist/js/bootstrap.js',
         'libs/select2.min.js',
-        'libs/my_scripts.js',
         'libs/html5shiv.min.js',
         'libs/respond.min.js'
-
     ]);
 });
