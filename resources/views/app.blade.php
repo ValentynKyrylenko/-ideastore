@@ -11,8 +11,6 @@
 
 
 	<link href="{{ asset('/css/all.css') }}" rel="stylesheet">
-	<link href="{{ asset('/css/lightbox.css') }}" rel="stylesheet"> <!--LIGHTBOX STYLE-->
-	<link href="{{ asset('/css/footer-distributed-with-address-and-phones.css') }}" rel="stylesheet"><!--FOOTER STYLE-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--FOOTER STYLE-->
 
@@ -108,6 +106,19 @@ a:link {color: #CA6924; text-decoration: none; }
 a:active {color: #8DB255; text-decoration: underline; }
 a:visited {color: #95A5A6; text-decoration: underline; }
 a:hover {color: #757D75; text-decoration: none; }
+
+/*Стиль для рисунка на заставку на главной странице сайта*/
+            .home_page_bg_image img {
+             width: 100%; height: 100%;
+             }
+
+             .row {
+                 margin-left: -20px;
+                 *zoom: 1;
+                 margin-top: 15px;
+             }
+/*----------------------------------------------------------*/
+
 	</style>
 
 </head>
@@ -126,16 +137,16 @@ a:hover {color: #757D75; text-decoration: none; }
                        </div>
                        @endif
 
-                     <div class="row">
+                     <div class="row"> <!--Карусель-->
                                   <div class="col-md-12">
-                                     @include('side_content.slick') <!--Slick Carousel-->
+                                     @include('side_content.slick')
                                   </div>
                       </div>
 
 
-                       <div id="banner_area" class="row">
+                       <div id="main_content" class="row"><!--Основная информация сайта-->
                                    <div class="col-md-12">
-                                      @yield('articles') <!--Contents-->
+                                      @yield('articles')
                                    </div>
                        </div>
 
