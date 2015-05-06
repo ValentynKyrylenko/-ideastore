@@ -5,6 +5,12 @@
 
 
               <div class="container">
+              <div class="row">
+              <div class="col-md-12">
+                                   @include('partials._side_menu')
+              </div>
+              </div>
+
                      <div class="row">
                           <div class="col-md-3">
                                      @include('partials._list_group')
