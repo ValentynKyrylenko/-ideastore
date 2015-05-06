@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
         'DaveJamesMiller\Breadcrumbs\ServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
 
 
 		/*
@@ -200,6 +201,7 @@ return [
         'HTML'      => 'Illuminate\Html\HtmlFacade',
         'Carbon'    => 'Carbon\Carbon',
         'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
+        'Image' => 'Intervention\Image\Facades\Image',
 
 	],
 
