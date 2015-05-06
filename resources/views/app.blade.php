@@ -147,18 +147,18 @@ a:hover {color: #757D75; text-decoration: none; }
                                   </div>
                       </div>
 
+                        <div id="main_content" class="row"><!--Интерактивное меню-->
+                                <div class="col-md-12">
+                                   @include('partials._side_menu')
+                                </div>
+                        </div>
+
 
                        <div id="main_content" class="row"><!--Основная информация сайта-->
                                    <div class="col-md-12">
                                       @yield('articles')
                                    </div>
                        </div>
-
-                       <div id="main_content" class="row"><!--Интерактивное меню-->
-                          <div class="col-md-12">
-                             @include('partials._side_menu')
-                          </div>
-                      </div>
 
                        <div class="row"> <!--Нижние блоки-->
                           @include('side_content.products')
