@@ -46,7 +46,8 @@ class AdsController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        $ads = Ad::latest('published_at')->published()->get();
+        return view ('ads.index', compact('ads'));
 	}
 
 	/**
@@ -78,9 +79,9 @@ class AdsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(Ad $ad)
 	{
-		//
+		return 'in progress';
 	}
 
 	/**
