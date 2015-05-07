@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
-class ImagesController extends Controller {
+class AdsController extends Controller {
 
+    /**
+     *
+     * processing input image for faster use
+     */
     public function make_image(){
         // configure with favored image driver (gd by default)
         Image::configure(array('driver' => 'gd'));
 
-// and you are ready to go ...
+        // and you are ready to go ...
 
         $image = Image::make('http://localhost/laravel_1/public/tears.jpg');
         $image->resize(100, null, function ($constraint) {
@@ -22,7 +26,6 @@ class ImagesController extends Controller {
 
         return 'done';
     }
-
 	/**
 	 * Display a listing of the resource.
 	 *

@@ -16,7 +16,7 @@ Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );
 
 
 Route::get('tags/{tags}', 'TagsController@show');
-Route::get('image', 'ImagesController@make_image');
+Route::get('advert', 'AdsController@make_image');
 
 
 Route::resource('articles', 'ArticlesController', array('names' => array('index' => 'articles', 'show' => 'show_article')));
