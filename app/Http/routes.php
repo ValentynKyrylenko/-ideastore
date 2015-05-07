@@ -16,12 +16,14 @@ Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );
 
 
 Route::get('tags/{tags}', 'TagsController@show');
-Route::get('advert', 'AdsController@make_image');
+
 
 
 Route::resource('articles', 'ArticlesController', array('names' => array('index' => 'articles', 'show' => 'show_article')));
 Route::resource('events', 'EventsController', array('names' => array('index' => 'events', 'show' => 'show_event')));
 Route::resource('products', 'ProductsController', array('names' => array('index' => 'products', 'show' => 'show_product')));
+
+Route::resource('ads', 'AdsController', array('names' => array('index' => 'ads', 'show' => 'show_ad')));
 
 
 Route::controllers([

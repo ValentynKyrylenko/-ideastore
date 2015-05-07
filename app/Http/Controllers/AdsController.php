@@ -1,12 +1,24 @@
 <?php namespace App\Http\Controllers;
 
+use Auth;
+use App\Ad;
 use App\Http\Requests;
+use App\Http\Requests\AdRequest;
 use App\Http\Controllers\Controller;
-
+use Illuminate\HttpResponse;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class AdsController extends Controller {
+    /**
+     * Auth Access
+     */
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => ['create', 'edit', 'show']]);
+        $this->middleware('admin', ['only' => ['create', 'edit']]);
+    }
 
     /**
      *
@@ -43,7 +55,7 @@ class AdsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
