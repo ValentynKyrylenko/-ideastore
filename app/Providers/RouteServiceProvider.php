@@ -40,6 +40,16 @@ class RouteServiceProvider extends ServiceProvider {
         {
             return \App\Tag::where('name', $name)->firstOrFail();
         });
+
+        $router->bind('ads', function($id)
+        {
+            return \App\Ad::published()->findOrFail($id);
+        });
+
+        $router->bind('tagads', function($name)
+        {
+            return \App\Tagad::where('name', $name)->firstOrFail();
+        });
     	}
 
 	/**

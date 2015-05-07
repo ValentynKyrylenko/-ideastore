@@ -25,13 +25,9 @@ class AdRequest extends Request {
             'published_at' => 'required|date',
             'title' => 'required|min:5|max:20',
             'body' => 'required|min:10|max:200',
-            'condition' => 'required|max:20',
-            'image'=>'required|image|mimes:jpeg,jpg,bmp,png,gif',
+            'image'=>'image|mimes:jpeg,jpg,bmp,png,gif',
             'location' => 'required|min:3',
-            'post' => 'required|min:5',
-            'price' => 'required|numeric',
-            'phone' => 'required'        
-
+            'phone' => 'required'
 		];
 	}
 

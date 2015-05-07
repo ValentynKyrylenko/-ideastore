@@ -2,6 +2,7 @@
 
 use Auth;
 use App\Ad;
+use App\Tagad;
 use App\Http\Requests;
 use App\Http\Requests\AdRequest;
 use App\Http\Controllers\Controller;
@@ -55,7 +56,8 @@ class AdsController extends Controller {
 	 */
 	public function create()
 	{
-
+        $tagads = Tagad::lists('name', 'id');
+        return view ('ads.create', compact('tagads'));
 	}
 
 	/**
@@ -63,9 +65,11 @@ class AdsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(AdRequest $request)
 	{
-		//
+        $this->createAd($request);
+        \Session::flash('message','Ваше объявление сохранено!');
+        return redirect('ads');
 	}
 
 	/**
@@ -112,4 +116,28 @@ class AdsController extends Controller {
 		//
 	}
 
+    private function syncTagads(Ad $ad, array $tagads)
+    {
+        $ad->tagads()->sync($tagads);
+    }
+
+    private function createAd(AdRequest $request)
+    {
+        $input = $request->all();
+
+        if ($request->has('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path('/media/visitors_adds/' . $filename);
+            Image::make($image->getRealPath())->resize(468, 249)->save($path);
+            $image = '/media/visitors_adds/' . $filename;
+            $input['image'] = $image;
+        } else {
+            $input['image'] = 'not provided';
+        }
+
+        $ad = Auth::user()->ads()->create($input);
+        $this->syncTagads($ad, $request->input('tagad_list'));
+        return $ad;
+    }
 }

@@ -48,9 +48,9 @@ class Ad extends Model {
     {
         return $this->belongsToMany('App\Tagad')->withTimestamps();
     }
+
     public function getTagadListAttribute()
     {
         return $this->tagads->lists('id');
     }
-
 }
