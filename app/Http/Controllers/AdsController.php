@@ -81,7 +81,7 @@ class AdsController extends Controller {
 	 */
 	public function show(Ad $ad)
 	{
-		return 'in progress';
+        return view ('ads.show', compact('ad'));
 	}
 
 	/**
@@ -126,16 +126,15 @@ class AdsController extends Controller {
     {
         $input = $request->all();
 
-        if ($request->has('image')) {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $path = public_path('/media/visitors_adds/' . $filename);
             Image::make($image->getRealPath())->resize(468, 249)->save($path);
             $image = '/media/visitors_adds/' . $filename;
             $input['image'] = $image;
-        } else {
-            $input['image'] = 'not provided';
         }
+
 
         $ad = Auth::user()->ads()->create($input);
         $this->syncTagads($ad, $request->input('tagad_list'));
