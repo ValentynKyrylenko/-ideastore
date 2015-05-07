@@ -14,6 +14,7 @@
 	<link href="{{ asset('/css/jquery-ui.min.css') }}" rel="stylesheet"> <!--JQUERY UI-->
 	<link href="{{ asset('/css/jquery-ui.theme.min.css') }}" rel="stylesheet"> <!--JQUERY UI-->
 	<link href="{{ asset('/css/side_menu.css') }}" rel="stylesheet"><!--Интерактивное меню сайта-->
+	<link href="{{ asset('/css/search.css') }}" rel="stylesheet"><!--Поиск-->
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--FOOTER STYLE-->
@@ -147,9 +148,6 @@ a:hover {color: #757D75; text-decoration: none; }
                                   </div>
                       </div>
 
-
-
-
                        <div id="main_content" class="row"><!--Основная информация сайта-->
                                    <div class="col-md-12">
                                       @yield('articles')
@@ -160,6 +158,10 @@ a:hover {color: #757D75; text-decoration: none; }
                           @include('side_content.products')
                           @include('side_content.tags')
                           @include('side_content.recent')
+                       </div>
+
+                       <div class="row"> <!--Поиск посайту-->
+                       @include('partials._search_box')
                        </div>
             </div> <!--Body site main contents-->
 
