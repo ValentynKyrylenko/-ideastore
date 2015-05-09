@@ -16,6 +16,10 @@ elixir(function(mix) {
     mix.styles([
         'app.css',
         'libs/bootstrap-theme.min.css',
+        'libs/jquery-ui.min.css',
+        'libs/jquery-ui.theme.min.css',
+        'libs/side_menu.css',
+        'libs/search.css',
         'libs/component_links.css',
         'libs/lightbox.css',
         'libs/slick.css',
@@ -24,16 +28,21 @@ elixir(function(mix) {
         'libs/select2.min.css'
     ]);
 
+
+
     mix.scripts([
         '../assets/bower/jquery/dist/jquery.js',
         'libs/jquery-migrate-1.2.1.min.js',
         '../assets/bower/bootstrap/dist/js/bootstrap.js',
+        'libs/jquery-ui.min.js',
         //'../../public/ckeditor/ckeditor.js',
         //'../../public/ckeditor/adapters/jquery.js',
         '../../public/js/slick.min.js',
         'libs/select2.min.js',
         'libs/html5shiv.min.js',
         'libs/respond.min.js',
-        '../../public/js/my_script.js'
+        'libs/my_script.js'
     ]);
+
 });
+
