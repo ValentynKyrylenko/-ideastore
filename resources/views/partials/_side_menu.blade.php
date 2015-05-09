@@ -56,10 +56,9 @@
                           <p class="narrow text-center">
                               Наша история, наши ценности,как создавался этот проект...
                           </p>
-
                           <p class="text-center">
                     <a href="" class="btn btn-success btn-outline-rounded green"> наши авторские работы <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
-                </p>
+                          </p>
 
                       </div>
                       <div class="tab-pane fade" id="messages">
@@ -70,7 +69,7 @@
 
                           <p class="text-center">
                     <a href="" class="btn btn-success btn-outline-rounded green"> благотворительность <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
-                </p>
+                          </p>
                       </div>
                       <div class="tab-pane fade" id="settings">
                           <h3 class="head text-center">Последние новости!</h3>

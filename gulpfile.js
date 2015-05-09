@@ -15,7 +15,7 @@ elixir(function(mix) {
     mix.less('app.less','resources/css');
     mix.styles([
         'app.css',
-        'libs/bootstrap-theme.min.css',
+        //'libs/bootstrap-theme.min.css',
         'libs/jquery-ui.min.css',
         'libs/jquery-ui.theme.min.css',
         'libs/side_menu.css',
@@ -36,8 +36,6 @@ elixir(function(mix) {
         'libs/jquery-migrate-1.2.1.min.js',
         '../assets/bower/bootstrap/dist/js/bootstrap.js',
         'libs/jquery-ui.min.js',
-        //'../../public/ckeditor/ckeditor.js',
-        //'../../public/ckeditor/adapters/jquery.js',
         '../../public/js/slick.min.js',
         'libs/select2.min.js',
         'libs/html5shiv.min.js',
