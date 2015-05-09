@@ -48,7 +48,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> мастер-классы различных мастеров <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                    <a href="" class="btn btn-success btn-outline-rounded green"> мастер-классы различных мастеров <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="profile">
@@ -58,7 +58,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> наши авторские работы <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                    <a href="" class="btn btn-success btn-outline-rounded green"> наши авторские работы <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
 
                       </div>
@@ -69,7 +69,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> благотворительность <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                    <a href="" class="btn btn-success btn-outline-rounded green"> благотворительность <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="settings">
@@ -79,7 +79,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> новости сайта <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                    <a href="" class="btn btn-success btn-outline-rounded green"> новости сайта <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="doner">
