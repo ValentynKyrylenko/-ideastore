@@ -9,7 +9,7 @@
                      <li class="active">
                      <a href="#home" data-toggle="tab" title="welcome">
                       <span class="round-tabs one">
-                              <i class="glyphicon glyphicon-home"></i>
+                              <i class="fa fa-anchor"></i>
                       </span>
                   </a></li>
 
@@ -99,8 +99,3 @@
 </div>
 </section>
 
-<script>
-            $(function(){
-            $('a[title]').tooltip();
-            });
-</script>

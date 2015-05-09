@@ -30,6 +30,7 @@ elixir(function(mix) {
 
 
 
+
     mix.scripts([
         '../assets/bower/jquery/dist/jquery.js',
         'libs/jquery-migrate-1.2.1.min.js',
@@ -43,6 +44,12 @@ elixir(function(mix) {
         'libs/respond.min.js',
         'libs/my_script.js'
     ]);
+
+    mix.version([
+        'public/css/all.css',
+        'public/js/all.js'
+    ]);
+
 
 });
 

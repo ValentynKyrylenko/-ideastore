@@ -60,4 +60,6 @@ $(document).ready(function() {
 
     $('#accordion').accordion();/** Jquery UI**/
 
+    $('#accordion').accordion();/** Nice third party front page partial**/
+
 }); /** Document Ready**/
