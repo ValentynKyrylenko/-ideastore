@@ -15,25 +15,25 @@
 
                   <li><a href="#profile" data-toggle="tab" title="profile">
                      <span class="round-tabs two">
-                         <i class="glyphicon glyphicon-user"></i>
+                         <i class="fa fa-users"></i>
                      </span>
            </a>
                  </li>
                  <li><a href="#messages" data-toggle="tab" title="bootsnipp goodies">
                      <span class="round-tabs three">
-                          <i class="glyphicon glyphicon-gift"></i>
+                          <i class="fa fa-heart"></i>
                      </span> </a>
                      </li>
 
                      <li><a href="#settings" data-toggle="tab" title="blah blah">
                          <span class="round-tabs four">
-                              <i class="glyphicon glyphicon-comment"></i>
+                              <i class="fa fa-comments"></i>
                          </span>
                      </a></li>
 
                      <li><a href="#doner" data-toggle="tab" title="completed">
                          <span class="round-tabs five">
-                              <i class="glyphicon glyphicon-ok"></i>
+                              <i class="fa fa-coffee"></i>
                          </span> </a>
                      </li>
 
