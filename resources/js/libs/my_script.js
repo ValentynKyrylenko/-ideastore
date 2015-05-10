@@ -62,4 +62,6 @@ $(document).ready(function() {
 
     $('#accordion').accordion();/** Nice third party front page partial**/
 
+    $('#example').DataTable();/** DataTables**/
+
 }); /** Document Ready**/

@@ -25,7 +25,9 @@ elixir(function(mix) {
         'libs/slick.css',
         'libs/slick-theme.css',
         'libs/footer-distributed-with-address-and-phones.css',
-        'libs/select2.min.css'
+        'libs/select2.min.css',
+        'libs/jquery.dataTables.min.css',
+        'libs/jquery.dataTables_themeroller.css'
     ]);
 
 
@@ -40,6 +42,7 @@ elixir(function(mix) {
         'libs/select2.min.js',
         'libs/html5shiv.min.js',
         'libs/respond.min.js',
+        'libs/jquery.dataTables.min.js',
         'libs/my_script.js'
     ]);
 
