@@ -47,7 +47,9 @@ class AdsController extends Controller {
 	public function index()
 	{
         $ads = Ad::latest('published_at')->published()->get();
-        return view ('ads.index', compact('ads'));
+        $user_ads = Auth::user()->ads()->published()->get();
+        $tagads = Tagad::all();
+        return view ('ads.index', compact('ads', 'user_ads', 'tagads'));
 	}
 
 	/**
@@ -130,7 +132,10 @@ class AdsController extends Controller {
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $path = public_path('/media/visitors_adds/' . $filename);
-            Image::make($image->getRealPath())->resize(468, 249)->save($path);
+            Image::make($image->getRealPath())->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->trim('top-left', null, 40)->save($path);
             $image = '/media/visitors_adds/' . $filename;
             $input['image'] = $image;
         }
