@@ -51,6 +51,10 @@ elixir(function(mix) {
         'public/js/all.js'
     ]);
 
+    elixir(function(mix) {
+        mix.copy('public/images', 'public/build/images');
+    });
+
 
 });
 
