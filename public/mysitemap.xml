@@ -13,27 +13,27 @@
 		<changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>&lt;p&gt;sfdgsfdgsfdhgfh&lt;/p&gt;
-</loc>
-		<priority>dfgdfgssdfgsfg</priority>
+    <loc>http://localhost/laravel_1/public/articles?4</loc>
+		<priority>0.5</priority>
 		<lastmod>2015-05-10T19:45:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>&lt;p&gt;889jjjyuiuyt&lt;/p&gt;
-</loc>
-		<priority>88888yuu</priority>
+    <loc>http://localhost/laravel_1/public/articles?3</loc>
+		<priority>0.5</priority>
 		<lastmod>2015-05-04T14:02:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>&lt;p&gt;sdfgfdghdfghdfhdfgh&lt;/p&gt;
-</loc>
-		<priority>sdfsdfgsdfgsdfg</priority>
+    <loc>http://localhost/laravel_1/public/articles?2</loc>
+		<priority>0.5</priority>
 		<lastmod>2015-05-03T14:48:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>&lt;p&gt;В этой статье мы раскажем как связать мягкую игрушку.&lt;/p&gt;
-</loc>
-		<priority>Как связать мягкую игрушку</priority>
+    <loc>http://localhost/laravel_1/public/articles?1</loc>
+		<priority>0.5</priority>
 		<lastmod>2015-04-27T19:18:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
   </url>
 </urlset>

@@ -25,8 +25,10 @@ Route::get('mysitemap', function(){
     // add every post to the sitemap
     foreach ($articles as $article)
     {
-        $sitemap->add($article->body, $article->created_at, $article->title);
-        $sitemap->add($article->slug, $article->modified, $article->priority, $article->freq);
+//        $sitemap->add($article->body, $article->created_at, $article->title);
+//        $sitemap->add($article->slug, $article->modified, $article->priority, $article->freq);
+        $sitemap->add(route('articles', $article->id),
+            $article->created_at, '0.5', 'monthly');
     }
 
     // generate your sitemap (format, filename)
