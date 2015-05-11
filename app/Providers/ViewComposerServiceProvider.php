@@ -3,6 +3,7 @@
 use App\Article;
 use App\Product;
 use App\Tag;
+use App\Tagad;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,6 +20,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
         $this->composeTags();
         $this->composeRecent();
         $this->composeProducts();
+        $this->composeListGroup();
     }
 
 	/**
@@ -56,6 +58,13 @@ class ViewComposerServiceProvider extends ServiceProvider {
     {
         view()->composer('side_content.products', function ($view) {
             $view->with('latest_products', Product::orderBy('created_at', 'DESC')->published()->take(5)->get());
+        });
+    }
+
+    private function composeListGroup()
+    {
+        view()->composer('partials._list_group', function ($view) {
+            $view->with('tagads', Tagad::all());
         });
     }
 

@@ -140,11 +140,11 @@ a:hover {color: #757D75; text-decoration: none; }
                        </div>
                        @endif
 
-                     <div class="row"> <!--Карусель-->
-                                  <div class="col-md-12">
-                                     @include('side_content.slick')
-                                  </div>
-                      </div>
+                     {{--<div class="row"> <!--Карусель-->--}}
+                                  {{--<div class="col-md-12">--}}
+                                     {{--@include('side_content.slick')--}}
+                                  {{--</div>--}}
+                      {{--</div>--}}
 
                        <div id="main_content" class="row"><!--Основная информация сайта-->
                                    <div class="col-md-12">

@@ -16,6 +16,7 @@ Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );
 
 
 Route::get('tags/{tags}', 'TagsController@show');
+Route::get('tagads/{tagads}', 'TagadsController@show');
 
 
 

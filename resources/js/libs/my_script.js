@@ -64,4 +64,8 @@ $(document).ready(function() {
 
     $('#example').DataTable();/** DataTables**/
 
+        // handle jQuery plugin naming conflict between jQuery UI and Bootstrap
+    $.widget.bridge('uibutton', $.ui.button);
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+
 }); /** Document Ready**/

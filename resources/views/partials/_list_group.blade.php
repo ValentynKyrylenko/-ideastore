@@ -1,32 +1,33 @@
 <div id="accordion">
-  <h3>Партнёры сайта</h3>
+  <h3>Объявления</h3>
   <div>
     <p>
-    Здесь мы разместим ссылки на партнёрские программы.
+    Зарегестрированняе пользователи здесь могут прочитать объявления о продаже работ лучших мастеров хенд-мейд.
+    </p>
+    <p>
+     <a href="{{action ('AdsController@index')}}" class="btn btn-mini btn-default">Просмотреть...</a>
     </p>
   </div>
-  <h3>Новости киева</h3>
+  <h3>Категории</h3>
   <div>
     <p>
-    Различные городские события
+    Поиск объявлений по категориям:
     </p>
+ <ul class="list-group">
+                  @foreach($tagads as $tag)
+                  <li class="list-group-item"><a href="{{action ('TagadsController@show', [$tag->name])}}" class="btn btn-link">{{$tag->name}}</a></li>
+                  @endforeach
+ </ul>
   </div>
-  <h3>Покупки для хенд - мейд</h3>
+  <h3>Разместить</h3>
   <div>
     <p>
-    Информация об интересных предложениях
+    Здесь зарегестрированные пользователи могут самостоятельно разместить объявления о своих работах.
     </p>
-    <ul>
-      <li>Нитки</li>
-      <li>Игрушки</li>
-      <li>Прочее</li>
-    </ul>
-  </div>
-  <h3>Планы</h3>
-  <div>
     <p>
-    Всё что мы планируем
+     <a href="{{action ('AdsController@create')}}" class="btn btn-mini btn-default">Создать...</a>
     </p>
+
   </div>
 </div>
 

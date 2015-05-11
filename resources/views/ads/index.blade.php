@@ -36,7 +36,7 @@
                                                     </tfoot>
 
                                                     <tbody>
-                                                    @foreach($ads as $ad)
+                                                    @foreach($user_ads as $ad)
                                                         <tr>
                                                             <td>{!! HTML::image($ad->image, 'a picture', array('class' => 'thumb')) !!}</td>
                                                             <td>{{$ad->title}}</td>

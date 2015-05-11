@@ -17,8 +17,8 @@ class AdsController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('auth', ['only' => ['create', 'edit', 'show']]);
-        $this->middleware('admin', ['only' => ['create', 'edit']]);
+        $this->middleware('auth', ['only' => ['index', 'create', 'edit', 'show']]);
+
     }
 
     /**
@@ -48,6 +48,7 @@ class AdsController extends Controller {
 	{
         $ads = Ad::latest('published_at')->published()->get();
         $user_ads = Auth::user()->ads()->published()->get();
+
         $tagads = Tagad::all();
         return view ('ads.index', compact('ads', 'user_ads', 'tagads'));
 	}
