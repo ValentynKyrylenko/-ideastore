@@ -10,6 +10,30 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('mysitemap', function(){
+
+    // create new sitemap object
+    $sitemap = App::make("sitemap");
+
+    // add items to the sitemap (url, date, priority, freq)
+    $sitemap->add(URL::to('products'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('articles'), '2012-08-26T12:30:00+02:00', '0.9', 'monthly');
+
+    // get all posts from db
+    $articles = DB::table('articles')->orderBy('created_at', 'desc')->get();
+
+    // add every post to the sitemap
+    foreach ($articles as $article)
+    {
+        $sitemap->add($article->body, $article->created_at, $article->title);
+        $sitemap->add($article->slug, $article->modified, $article->priority, $article->freq);
+    }
+
+    // generate your sitemap (format, filename)
+    $sitemap->store('xml', 'mysitemap');
+    // this will generate file mysitemap.xml to your public folder
+
+});
 
 Route::get('/', 'WelcomeController@index');
 Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );

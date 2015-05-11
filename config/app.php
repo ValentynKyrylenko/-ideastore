@@ -138,6 +138,7 @@ return [
         'Illuminate\Html\HtmlServiceProvider',
         'DaveJamesMiller\Breadcrumbs\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
+        'Roumen\Sitemap\SitemapServiceProvider',
 
 
 		/*
