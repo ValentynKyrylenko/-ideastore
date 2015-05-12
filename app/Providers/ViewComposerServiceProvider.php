@@ -21,6 +21,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
         $this->composeRecent();
         $this->composeProducts();
         $this->composeListGroup();
+        $this->composeAdsIndex();
     }
 
 	/**
@@ -64,6 +65,13 @@ class ViewComposerServiceProvider extends ServiceProvider {
     private function composeListGroup()
     {
         view()->composer('partials._list_group', function ($view) {
+            $view->with('tagads', Tagad::all());
+        });
+    }
+
+    private function composeAdsIndex()
+    {
+        view()->composer('ads.index', function ($view) {
             $view->with('tagads', Tagad::all());
         });
     }

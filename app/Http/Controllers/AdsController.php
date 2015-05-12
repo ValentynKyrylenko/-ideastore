@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\HttpResponse;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Redirect;
 
 class AdsController extends Controller {
     /**
@@ -93,9 +94,10 @@ class AdsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(Ad $ad)
 	{
-		//
+        $tagads = Tagad::lists('name', 'id');
+        return view('ads.edit',compact('ad', 'tagads'));
 	}
 
 	/**
@@ -104,9 +106,12 @@ class AdsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Ad $ad, AdRequest $request)
 	{
-		//
+        $ad->update($request->all());
+        $this->syncTagads($ad, $request->input('tagad_list'));
+        \Session::flash('message','Ваше объявление изменено!');
+        return redirect ('ads');
 	}
 
 	/**
@@ -115,9 +120,14 @@ class AdsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Ad $ad)
 	{
-		//
+
+        $ad->delete();
+
+        // redirect
+        \Session::flash('message','Ваше объявление было удалено!');
+        return Redirect::to('ads');
 	}
 
     private function syncTagads(Ad $ad, array $tagads)

@@ -9,8 +9,8 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Cоздание статтьи</div>
 				<div class="panel-body">
-				{!! Form::model($article, ['method'=>'PATCH', 'action'=>['ArticlesController@update', $article->id]]) !!}
-				@include('articles._form', ['submitButtonText'=>'Редактировать статью'])
+				{!! Form::model($ad, ['method'=>'PATCH', 'action'=>['AdsController@update', $ad->id]]) !!}
+				@include('ads._form', ['submitButtonText'=>'Редактировать объявление'])
 					{!! Form::close()!!}
 				</div>
 

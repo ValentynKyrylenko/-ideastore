@@ -19,7 +19,7 @@
                                                             <th>Местонахождение</th>
                                                             <th>Цена/грн.</th>
                                                             <th>Дата</th>
-                                                            <th>Просмотр</th>
+                                                            <th>Редактировать/Удалить</th>
                                                         </tr>
                                                     </thead>
 
@@ -31,7 +31,7 @@
                                                             <th>Местонахождение</th>
                                                             <th>Цена/грн.</th>
                                                             <th>Дата</th>
-                                                            <th>Просмотр</th>
+                                                            <th>Редактировать/Удалить</th>
                                                         </tr>
                                                     </tfoot>
 
@@ -44,7 +44,7 @@
                                                             <td>{{$ad->location}}</td>
                                                             <td>{{$ad->price}}</td>
                                                             <td>{{Carbon::parse($ad->published_at)->format('d/m/Y')}}</td>
-                                                            <td><a href="{{action ('AdsController@show', [$ad->id])}}">Просмотреть...</a></td>
+                                                            <td><a href="{{action ('AdsController@show', [$ad->id])}}">Действие...</a></td>
                                                         </tr>
                                                      @endforeach
                                                     </tbody>
@@ -55,7 +55,47 @@
 
 <!--------------------------------------------------------Объявления мастеров----------------------------------------------------------->
  <div class="panel panel-success">
-	   <div class="panel-heading"><h3>Объявления лучших мастеров</h3></div>
+	   <div class="panel-heading"><h3>Объявления лучших мастеров</h3>
+	   <!--------------------------------------------------------------------------->
+	   <!-- Button trigger modal -->
+       <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+         Разместить объявление
+       </button>
+
+       <!-- Modal -->
+    <div id="myModal" class="modal fade">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title">Confirmation</h4>
+                          </div>
+                          <div class="modal-body">
+                              <p class="text-warning">На нашем сайте Вы абсолютно бесплатно можете разместить свои работы хенд-мейд!</p>
+                              <p class="text-warning">Спасибо, что остаётесь с нами!</p>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Спасибо, я подумаю...</button>
+                              <a href="{{action ('AdsController@create')}}" class="btn btn-primary" role="button">Разместить работу...</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <span class="btn-group">
+                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                  Категории... <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  @foreach($tagads as $tag)
+                  <li><a href="{{action ('TagadsController@show', [$tag->name])}}">{{$tag->name}}</a></li>
+                  @endforeach
+
+                </ul>
+              </span>
+
+	   <!--------------------------------------------------------------------------->
+	   </div>
 					<div class="panel-body">
                     					@if (count($ads))
                     					<!------------------------------------------------------------------------------->

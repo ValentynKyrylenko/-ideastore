@@ -38,16 +38,35 @@
     <li class="previous"><a href="{{action ('AdsController@index')}}"><span aria-hidden="true">&larr;</span> Назад</a></li>
   </ul>
 </nav>
-@if (Auth::user())
-@if (Auth::user()->email == env('ADMIN_AUTH_MAIL'))
-                  </br>
-                  <a href="{{action ('AdsController@edit', [$ad->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs"></i></a>
-                  <a href="{{action ('AdsController@edit', [$ad->id])}}" class="btn btn-mini btn-default"> <i class="fa fa-trash-o"></i></a>
-@endif
-@endif
+                                                @if (Auth::user())
+                        @if (Auth::user()->email == env('ADMIN_AUTH_MAIL'))
+                   </br>
+                   <a href="{{action ('AdsController@edit', [$ad->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs">  Редактировать</i></a>
+                   <hr>
+                   {!! Form::model($ad, ['method'=>'DELETE', 'action'=>['AdsController@destroy', $ad->id]]) !!}
+                                  	<button type="submit" >Удалить объявление</button>
+                   {!! Form::close()!!}
+       @else
+    @if($ad->user_id == Auth::user()->id)
+</br>
+<a href="{{action ('AdsController@edit', [$ad->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs">  Редактировать</i></a>
+<hr>
+{!! Form::model($ad, ['method'=>'DELETE', 'action'=>['AdsController@destroy', $ad->id]]) !!}
+                <button type="submit" >Удалить объявление</button>
+{!! Form::close()!!}
+     @endif
+                       @endif
+                                                     @endif
+
+
+
 
                 </div>
 				</div>
 				</div>
+
+
+
+
 
 @endsection
