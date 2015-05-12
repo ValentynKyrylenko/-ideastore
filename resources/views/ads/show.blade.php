@@ -5,14 +5,24 @@
 				<div class="panel-heading"><h3>{{$ad->title}}</h3></div>
 				<div class="panel-body">
 				<div class="well well-sm">
+
+				@unless($ad->image == Null)
+                {!! HTML::image($ad->image, 'a picture', array('class' => 'thumb')) !!}
+                <hr>
+                @endunless
+                                                        @unless($ad->price == Null)
+                                                        <span class="label label-primary">
+                                                        Цена: {!!html_entity_decode($ad->price)!!} грн.
+                                                        </span>
+                                                        <hr>
+                                                        @endunless
+
 				<article>
 				{!!html_entity_decode($ad->body)!!}
 				</article>
 
 
-@unless($ad->image == Null)
-{!! HTML::image($ad->image, 'a picture', array('class' => 'thumb')) !!}
-@endunless
+
 
 @unless($ad->tagads->isEmpty())
 				<h5>Объявление находится в рубрике:</h5>
