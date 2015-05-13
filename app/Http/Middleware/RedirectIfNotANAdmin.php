@@ -14,7 +14,7 @@ class RedirectIfNotANAdmin {
 	public function handle($request, Closure $next)
     {
         if ( ! $request->user()->isAdmin()) {
-            return redirect ('articles');
+            return redirect ('home');
         }
         return $next($request);
     }

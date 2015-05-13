@@ -159,9 +159,9 @@ a:hover {color: #757D75; text-decoration: none; }
                           @include('side_content.recent')
                        </div>
 
-                       <div class="row"> <!--Поиск посайту-->
-                       @include('partials._search_box')
-                       </div>
+                       {{--<div class="row"> <!--Поиск посайту-->--}}
+                       {{--@include('partials._search_box')--}}
+                       {{--</div>--}}
             </div> <!--Body site main contents-->
 
 

@@ -5,15 +5,15 @@
 				<h3>Лого<span>ideastore.com.us</span></h3>
 
 				<p class="footer-links">
-					<a href="#">Дом</a>
+					<a href="{{ url('/home') }}">Дом</a>
 					·
-					<a href="#">Работы</a>
+					<a href="{{ url('/products') }}">Работы</a>
 					·
-					<a href="#">Идеи</a>
+					<a href="{{ url('/articles') }}">Идеи</a>
 					·
-					<a href="#">Новости</a>
+					<a href="{{ url('/events') }}">Новости</a>
 					·
-					<a href="#">Благотворительность</a>
+					<a href="{{ url('/charity') }}">Благотворительность</a>
 
 				</p>
 
@@ -24,12 +24,12 @@
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>Магазин идей</span> Киев, Украина</p>
+					<p><span>Магазин идей</span> Kyiv, Ukraine</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+38 0939 78 55 48</p>
+					<p>+38 0935 44 91 78</p>
 				</div>
 
 				<div>
@@ -42,8 +42,9 @@
 			<div class="footer-right">
 
 				<p class="footer-company-about">
-					<span>О нас</span>
-					Здесь вы найдёте много интересных идей...
+					<span>About us...</span>
+					This website was created by Valentyn and Antonina Kyrylenko to support creative people worldwide.
+					Thank you for your support!
 				</p>
 
 				<div class="footer-icons">

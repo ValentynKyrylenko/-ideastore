@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="form-group">
-                {!! Form::label('price', 'Цена') !!}
+                {!! Form::label('price', 'Цена, заполняется цифрами') !!}
                 {!! Form::text('price', null, ['class' => 'form-control']) !!}
                 </div>
 
@@ -39,7 +39,7 @@
 
 
                 <div class="form-group">
-                {!! Form::label('phone', 'Контактный номер') !!}
+                {!! Form::label('phone', 'Контактный номер, заполняется без пробелов и скобок') !!}
                 {!! Form::text('phone', null, ['class' => 'form-control']) !!}
                 </div>
 

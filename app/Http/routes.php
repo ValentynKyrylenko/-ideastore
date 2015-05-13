@@ -39,6 +39,7 @@ Route::get('mysitemap', function(){
 
 Route::get('/', 'WelcomeController@index');
 Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home'] );
+Route::get('charity',['uses' => 'CharityController@index', 'as' => 'charity_action'] );
 
 
 Route::get('tags/{tags}', 'TagsController@show');
@@ -57,3 +58,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('image', 'ImageController@index');
+Route::get('image/get/{filename}', [
+    'as' => 'getentry', 'uses' => 'ImageController@get']);
+Route::post('image/add',[
+    'as' => 'addentry', 'uses' => 'ImageController@add']);
+Route::get('image/delete/{filename}', [
+    'as' => 'deleteentry', 'uses' => 'ImageController@delete']);

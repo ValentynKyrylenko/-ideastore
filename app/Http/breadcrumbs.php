@@ -68,6 +68,11 @@ Breadcrumbs::register('create_ad', function($breadcrumbs)
     $breadcrumbs->parent('ads');
     $breadcrumbs->push('Создание объявления', route('create_ad'));
 });
+Breadcrumbs::register('charity_action', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Благотворительная деятельность', route('charity_action'));
+});
 
 
 

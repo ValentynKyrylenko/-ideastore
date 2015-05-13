@@ -48,6 +48,11 @@ return [
 			'root'   => storage_path().'/app',
 		],
 
+        'laravel' => [
+            'driver' => 'local',
+            'root'   => public_path().'/media/admin_media',
+        ],
+
 		's3' => [
 			'driver' => 's3',
 			'key'    => 'your-key',

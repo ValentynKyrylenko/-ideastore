@@ -11,7 +11,7 @@
                                 <div class="info">
                                     <h3 class="title"><a href="{{action ('ProductsController@show', [$product->id])}}">{{$product->title}}</a></h3>
                                     <p>
-                                        {!! Illuminate\Support\Str::words (html_entity_decode($product->body), 20) !!}
+                                        {!! Illuminate\Support\Str::words (html_entity_decode($product->body), 10) !!}
                                     </p>
 
                                     <div class="more">

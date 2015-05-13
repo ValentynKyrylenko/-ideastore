@@ -15,7 +15,7 @@ class Redirect_If_Not_A_Manager {
 	{
         if (! $request->user()->IsManager())
         {
-         return redirect('articles');
+         return redirect('home');
         }
 		return $next($request);
 	}

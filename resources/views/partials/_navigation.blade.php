@@ -16,7 +16,7 @@
 					<li><a href="{{ url('/products') }}"><i class="fa fa-briefcase fa-lg"> Авторские работы</i></a></li>
 					<li><a href="{{ url('/articles') }}"><i class="fa fa-comment fa-lg"> Мастер-классы</i></a></li>
 					<li><a href="{{ url('/events') }}"><i class="fa fa-bullhorn fa-lg"> Новости</i></a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-child fa-lg"> Благотворительность</i></a></li>
+					<li><a href="{{ url('/charity') }}"><i class="fa fa-child fa-lg"> Благотворительность</i></a></li>
 
 					<!-------------------------------------ADMIN----------------------------------------------------->
                                               @include('partials._adminMenu')
@@ -25,7 +25,7 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-				        <li><a href="{{ url('#') }}"><i class="fa fa-envelope fa-lg"> Обратная связь</i></a></li>
+
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}"><i class="fa fa-unlock fa-lg"> Вход</i></a></li>
 						<li><a href="{{ url('/auth/register') }}"><i class="fa fa-tag fa-lg"> Регистрация</i></a></li>

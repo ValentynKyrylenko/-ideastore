@@ -18,7 +18,7 @@ class EventsController extends Controller {
 	 */
     public function __construct()
     {
-        $this->middleware('auth', ['only' => ['create', 'edit', 'show', 'delete']]);
+        $this->middleware('auth', ['only' => ['create', 'edit', 'delete']]);
         $this->middleware('admin', ['only' => ['create', 'edit', 'delete']]);
     }
 

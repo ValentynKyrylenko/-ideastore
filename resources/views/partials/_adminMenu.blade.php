@@ -7,6 +7,7 @@
                                     <li><a href="{{ url('/articles/create') }}">Мастер клссы</a></li>
                                     <li><a href="{{ url('/events/create') }}">Новости</a></li>
                                     <li class="divider"></li>
+                                    <li><a href="{{ url('/image') }}">Загрузка медиа</a></li>
                                     <li><a href="{{ url('/auth/logout') }}">Выход ...</a></li>
                                   </ul>
                                 </li>
