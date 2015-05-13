@@ -26,7 +26,10 @@
 @if (Auth::user()->email == env('ADMIN_AUTH_MAIL'))
                   </br>
                   <a href="{{action ('ArticlesController@edit', [$article->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs"></i></a>
-                  <a href="{{action ('ArticlesController@edit', [$article->id])}}" class="btn btn-mini btn-default"> <i class="fa fa-trash-o"></i></a>
+                  <hr>
+                  {!! Form::model($article, ['method'=>'DELETE', 'action'=>['ArticlesController@destroy', $article->id]]) !!}
+                        <button type="submit" >Удалить статью</button>
+                  {!! Form::close()!!}
 @endif
 @endif
 

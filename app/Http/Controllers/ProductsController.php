@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 use Illuminate\HttpResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 
 
@@ -80,9 +81,13 @@ class ProductsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Product $product)
 	{
-		//
+        $product->delete();
+
+        // redirect
+        \Session::flash('message','Ваша работа была удалена!');
+        return Redirect::to('products');
 	}
 
 }

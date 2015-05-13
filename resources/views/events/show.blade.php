@@ -18,7 +18,10 @@
                                               @if (Auth::user()->email == env('ADMIN_AUTH_MAIL'))
                                                                   </br>
                                                                   <a href="{{action ('EventsController@edit', [$event->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs"></i></a>
-                                                                  <a href="{{action ('EventsController@edit', [$event->id])}}" class="btn btn-mini btn-default"> <i class="fa fa-trash-o"></i></a>
+                                                                  <hr>
+                                                                {!! Form::model($event, ['method'=>'DELETE', 'action'=>['EventsController@destroy', $event->id]]) !!}
+                                                                      <button type="submit" >Удалить новость</button>
+                                                                {!! Form::close()!!}
                                               @endif
                                               @endif
                             </div>

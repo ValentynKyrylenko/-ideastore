@@ -22,7 +22,10 @@
                                                 @if (Auth::user()->email == env('ADMIN_AUTH_MAIL'))
                                                                     </br>
                                                                     <a href="{{action ('ProductsController@edit', [$product->id])}}" class="btn btn-mini btn-default"><i class="fa fa-cogs"></i></a>
-                                                                    <a href="{{action ('ProductsController@edit', [$product->id])}}" class="btn btn-mini btn-default"> <i class="fa fa-trash-o"></i></a>
+                                                                    <hr>
+                                                                    {!! Form::model($product, ['method'=>'DELETE', 'action'=>['ProductsController@destroy', $product->id]]) !!}
+                                                                                    <button type="submit" >Удалить работу</button>
+                                                                    {!! Form::close()!!}
 
                                                 @endif
                                                 @endif

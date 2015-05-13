@@ -7,6 +7,7 @@ use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
 use Illuminate\HttpResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 
 /**
@@ -91,10 +92,14 @@ class ArticlesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		//
-	}
+    public function destroy(Article $article)
+    {
+        $article->delete();
+
+        // redirect
+        \Session::flash('message','Ваша статья была удалена!');
+        return Redirect::to('articles');
+    }
 
     /**
      * @param Article $article

@@ -6,6 +6,7 @@ use App\Http\Requests\EventRequest;
 use Illuminate\Http\Request;
 use Illuminate\HttpResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 
 
@@ -80,10 +81,14 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		//
-	}
+    public function destroy(Event $event)
+    {
+        $event->delete();
+
+        // redirect
+        \Session::flash('message','Ваша новость была удалена!');
+        return Redirect::to('events');
+    }
 
 
 
