@@ -10,8 +10,9 @@
 
 
 
-	{{--<link rel="stylesheet" href="{{ asset("css/all.css") }}">--}}
+
     <link rel="stylesheet" href="{{ asset(elixir("css/all.css")) }}">
+    <link rel="stylesheet" href="{{ asset("css/box.css") }}">
 
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->

@@ -50,7 +50,7 @@ Route::resource('articles', 'ArticlesController', array('names' => array('index'
 Route::resource('events', 'EventsController', array('names' => array('index' => 'events', 'show' => 'show_event')));
 Route::resource('products', 'ProductsController', array('names' => array('index' => 'products', 'show' => 'show_product')));
 
-Route::resource('ads', 'AdsController', array('names' => array('index' => 'ads', 'show' => 'show_ad')));
+Route::resource('ads', 'AdsController', array('names' => array('index' => 'ads', 'show' => 'show_ad', 'edit' => 'edit_ad', 'create' => 'create_ad')));
 
 
 Route::controllers([

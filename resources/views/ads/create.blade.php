@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('articles')
+{!! Breadcrumbs::render('create_ad') !!}
 
 
 <div class="container">

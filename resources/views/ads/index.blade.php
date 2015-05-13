@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('articles')
-{!! Breadcrumbs::render('articles') !!}
+{!! Breadcrumbs::render('ads') !!}
 
 @if (count($user_ads))
 

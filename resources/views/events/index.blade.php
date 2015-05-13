@@ -1,40 +1,30 @@
 @extends('app')
 @section('articles')
 {!! Breadcrumbs::render('events') !!}
- <div class="panel panel-success">
-	   <div class="panel-heading"><h3>Новости сайта</h3></div>
-					<div class="panel-body">
-                    					@if (count($events))
-                    					<ul>
-                    					@foreach($events as $event)
+ @if (count($events))
+         <ul>
+         @foreach($events as $event)
+                 <div class="col-xs-12 col-sm-6 col-lg-4">
+                         <div class="box">
+                             <div class="icon">
+                                 <div class="image"><i class="fa fa-bullhorn"></i></div>
+                                 <div class="info">
+                                     <h3 class="title"><a href="{{action ('EventsController@show', [$event->id])}}">{{$event->title}}</a></h3>
+                                     <p>
+                                         {!! Illuminate\Support\Str::words (html_entity_decode($event->body), 20) !!}
+                                     </p>
 
-                    					<!------------------------------------------------------------->
-                    					 <div class="col-md-4"> <div class="panel panel-warning">
-                                         <div class="panel-heading">
-                                             <a href="{{action ('EventsController@show', [$event->id])}}">{{$event->title}}</a>
-                                         </div>
-                                         <div class="panel-body">
-                                         {!! Illuminate\Support\Str::words (html_entity_decode($event->body), 10) !!}
-                                         <p>
-                                           <a href="{{action ('EventsController@show', [$event->id])}}" class="btn btn-mini btn-default">Дальше...</a>
-                                         </p>
-
-                                         </div>
-                                         </div>
-
-                                         </div> <!--2 Block END-->
-                    					<!------------------------------------------------------------->
-
-
-
-
-
-                    					@endforeach
-                    					</ul>
-                    					@endif
-
-			        </div>
-
- </div>
-
-@endsection
+                                     <div class="more">
+                                         <a href="{{action ('EventsController@show', [$event->id])}}" title="Title Link">
+                                             Читать дальше... <i class="fa fa-angle-double-right"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="space"></div>
+                         </div>
+                 </div>
+         @endforeach
+                     					</ul>
+         @endif
+  @endsection

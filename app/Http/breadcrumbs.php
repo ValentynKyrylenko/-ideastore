@@ -44,6 +44,30 @@ Breadcrumbs::register('show_event', function($breadcrumbs)
     $breadcrumbs->parent('events');
     $breadcrumbs->push('Это интересно', route('show_event'));
 });
+// Home > Eds
+Breadcrumbs::register('ads', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Раздел частных объявлений', route('ads'));
+});
+// Home > Eds > SHOW
+Breadcrumbs::register('show_ad', function($breadcrumbs)
+{
+    $breadcrumbs->parent('ads');
+    $breadcrumbs->push('Просмотр объявления', route('show_ad'));
+});
+// Home > Eds > EDIT
+Breadcrumbs::register('edit_ad', function($breadcrumbs)
+{
+    $breadcrumbs->parent('ads');
+    $breadcrumbs->push('Редактирование объявления', route('edit_ad'));
+});
+// Home > Eds > CREATE
+Breadcrumbs::register('create_ad', function($breadcrumbs)
+{
+    $breadcrumbs->parent('ads');
+    $breadcrumbs->push('Создание объявления', route('create_ad'));
+});
 
 
 
