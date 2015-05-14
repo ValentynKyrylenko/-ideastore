@@ -47,7 +47,7 @@ class AdsController extends Controller {
 	 */
 	public function index()
 	{
-        $ads = Ad::latest('published_at')->published()->get();
+        $ads = Ad::orderBy('created_at', 'DESC')->published()->get();
         $user_ads = Auth::user()->ads()->published()->get();
 
         $tagads = Tagad::all();
@@ -108,7 +108,27 @@ class AdsController extends Controller {
 	 */
 	public function update(Ad $ad, AdRequest $request)
 	{
-        $ad->update($request->all());
+          $ad->update($request->all());
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path('/media/visitors_adds/' . $filename);
+            Image::make($image->getRealPath())->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->trim('top-left', null, 40)->save($path);
+            $image = '/media/visitors_adds/' . $filename;
+            $input['image'] = $image;
+
+            $ad['image']=$image;
+            $ad->save();
+        }
+
+
+
+
+
         $this->syncTagads($ad, $request->input('tagad_list'));
         \Session::flash('message','Ваше объявление изменено!');
         return redirect ('ads');

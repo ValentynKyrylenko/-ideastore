@@ -80,6 +80,7 @@ Breadcrumbs::register('charity_action', function($breadcrumbs)
 
 
 
+
 // Home > Blog
 Breadcrumbs::register('blog', function($breadcrumbs)
 {

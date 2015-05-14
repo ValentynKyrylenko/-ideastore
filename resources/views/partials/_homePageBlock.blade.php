@@ -48,7 +48,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> мастер-классы различных мастеров <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
+                    <a href="{{ url('/articles') }}" class="btn btn-success btn-outline-rounded green"> мастер-классы различных мастеров <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="profile">
@@ -57,7 +57,7 @@
                               Наша история, наши ценности,как создавался этот проект...
                           </p>
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> наши авторские работы <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
+                    <a href="{{ url('/products') }}" class="btn btn-success btn-outline-rounded green"> наши авторские работы <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                           </p>
 
                       </div>
@@ -68,7 +68,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> благотворительность <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
+                    <a href="{{ url('/charity') }}" class="btn btn-success btn-outline-rounded green"> благотворительность <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                           </p>
                       </div>
                       <div class="tab-pane fade" id="settings">
@@ -78,7 +78,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="" class="btn btn-success btn-outline-rounded green"> новости сайта <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
+                    <a href="{{ url('/events') }}" class="btn btn-success btn-outline-rounded green"> новости сайта <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="doner">

@@ -34,8 +34,9 @@
 
 	<style>
 	body {
-        margin-top: 35px;
-        background-image: url("http://localhost/laravel_1/public/media/background_images/seamless_paper_texture.png");
+        /*margin-top: 35px;*/
+        /*background-image: url("http://localhost/laravel_1/public/media/background_images/seamless_paper_texture.png");*/
+        background-image: url( {{ URL::asset('media/background_images/seamless_paper_texture.png') }})
     }
     hr {
         color: #bdc3c7; /*для IE */
@@ -132,6 +133,7 @@ a:hover {color: #757D75; text-decoration: none; }
 
 <body>
            <header>
+                   @include('partials._banner')
                    @include('partials._navigation')
            </header>
 

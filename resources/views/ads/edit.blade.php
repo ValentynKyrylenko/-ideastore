@@ -10,9 +10,9 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Cоздание статтьи</div>
 				<div class="panel-body">
-				{!! Form::model($ad, ['method'=>'PATCH', 'action'=>['AdsController@update', $ad->id]]) !!}
+				{!! Form::model($ad, ['method'=>'PATCH','files'=>true, 'action'=>['AdsController@update', $ad->id]]) !!}
 				@include('ads._form', ['submitButtonText'=>'Редактировать объявление'])
-					{!! Form::close()!!}
+				{!! Form::close()!!}
 				</div>
 
 @include('errors.list')

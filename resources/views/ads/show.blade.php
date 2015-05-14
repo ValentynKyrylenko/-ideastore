@@ -20,6 +20,11 @@
 				<article>
 				{!!html_entity_decode($ad->body)!!}
 				</article>
+<hr>
+<h3>Телефон:</h3>
+				<article>
+                {!!html_entity_decode($ad->phone)!!}
+                </article>
 
 
 

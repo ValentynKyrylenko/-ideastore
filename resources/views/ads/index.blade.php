@@ -13,7 +13,6 @@
     <table class="table table-striped table-hover">
                                                     <thead>
                                                         <tr>
-                                                            <th>Изображение</th>
                                                             <th>Название</th>
                                                             <th>Описание</th>
                                                             <th>Местонахождение</th>
@@ -25,7 +24,6 @@
 
                                                     <tfoot>
                                                         <tr>
-                                                            <th>Изображение</th>
                                                             <th>Название</th>
                                                             <th>Описание</th>
                                                             <th>Местонахождение</th>
@@ -38,12 +36,11 @@
                                                     <tbody>
                                                     @foreach($user_ads as $ad)
                                                         <tr>
-                                                            <td>{!! HTML::image($ad->image, 'a picture', array('class' => 'thumb')) !!}</td>
                                                             <td>{{$ad->title}}</td>
                                                             <td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>
                                                             <td>{{$ad->location}}</td>
                                                             <td>{{$ad->price}}</td>
-                                                            <td>{{Carbon::parse($ad->published_at)->format('d/m/Y')}}</td>
+                                                            <td>{{Carbon::parse($ad->created_at)->format('d/m/Y')}}</td>
                                                             <td><a href="{{action ('AdsController@show', [$ad->id])}}">Действие...</a></td>
                                                         </tr>
                                                      @endforeach
@@ -102,7 +99,6 @@
                     					<table id="example" class="display" cellspacing="0" width="100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>Изображение</th>
                                                         <th>Название</th>
                                                         <th>Описание</th>
                                                         <th>Местонахождение</th>
@@ -114,7 +110,6 @@
 
                                                 <tfoot>
                                                     <tr>
-                                                        <th>Изображение</th>
                                                         <th>Название</th>
                                                         <th>Описание</th>
                                                         <th>Местонахождение</th>
@@ -127,12 +122,12 @@
                                                 <tbody>
                                                 @foreach($ads as $ad)
                                                     <tr>
-                                                        <td>{!! HTML::image($ad->image, 'a picture', array('class' => 'thumb')) !!}</td>
+
                                                         <td>{{$ad->title}}</td>
                                                         <td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>
                                                         <td>{{$ad->location}}</td>
                                                         <td>{{$ad->price}}</td>
-                                                        <td>{{Carbon::parse($ad->published_at)->format('d/m/Y')}}</td>
+                                                        <td>{{Carbon::parse($ad->created_at)->format('d/m/Y')}}</td>
                                                         <td><a href="{{action ('AdsController@show', [$ad->id])}}">Просмотреть...</a></td>
                                                     </tr>
                                                  @endforeach
