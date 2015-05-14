@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration {
             $table->increments('id');
             $table->timestamps();
             $table->string('title');
-            $table->string('body');
+            $table->text('body');
             $table->integer('price')->unsigned()->nullable();
             $table->timestamp('published_at');
 		});

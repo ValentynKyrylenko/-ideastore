@@ -44,10 +44,10 @@ class ProductsController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function store(Product $product, ProductRequest $request)
+    public function store(ProductRequest $request)
     {
         \Session::flash('message','Ваша работа сохранена!');
-        $product->create($request->all());
+        $this->createProduct($request);
         return redirect('products');
     }
 
@@ -89,5 +89,12 @@ class ProductsController extends Controller {
         \Session::flash('message','Ваша работа была удалена!');
         return Redirect::to('products');
 	}
+
+    private function createProduct(ProductRequest $request)
+    {
+        $product = Product::create($request->all());
+
+        return $product;
+    }
 
 }

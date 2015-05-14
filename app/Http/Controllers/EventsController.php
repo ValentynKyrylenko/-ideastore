@@ -47,7 +47,7 @@ class EventsController extends Controller {
 	public function store(Event $event, EventRequest $request)
 	{
         \Session::flash('message','Новость сохранена!');
-        $event->create($request->all());
+        $this->createEvent($request);
         return redirect('events');
 	}
 
@@ -89,7 +89,12 @@ class EventsController extends Controller {
         \Session::flash('message','Ваша новость была удалена!');
         return Redirect::to('events');
     }
+    private function createEvent(EventRequest $request)
+    {
+        $product = Event::create($request->all());
 
+        return $product;
+    }
 
 
 }

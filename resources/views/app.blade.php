@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="{{ asset(elixir("css/all.css")) }}">
     <link rel="stylesheet" href="{{ asset("css/box.css") }}">
+    {{--<script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>--}}
 
 
 
