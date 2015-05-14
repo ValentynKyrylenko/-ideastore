@@ -48,7 +48,7 @@
                           </p>
 
                           <p class="text-center">
-                    <a href="{{ url('/articles') }}" class="btn btn-success btn-outline-rounded green"> мастер-классы различных мастеров <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
+                    <a href="{{ url('/articles') }}" class="btn btn-success btn-outline-rounded green"> мастер-классы <span style="margin-left:10px;" class="fa fa-pencil"></span></a>
                 </p>
                       </div>
                       <div class="tab-pane fade" id="profile">
