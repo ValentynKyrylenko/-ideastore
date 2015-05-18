@@ -24,9 +24,9 @@ class AdRequest extends Request {
 		return [
             'published_at' => 'required|date',
             'title' => 'required|min:2|max:50|string|regex:/^[\pL\s\d\.\,\!\-\:]+$/u',
-            'body' => 'required|min:5|max:300|regex:/^[\pL\s\d]+$/u',
+            'body' => 'required|min:5|max:300|regex:/^[\pL\s\d\.\,\!\-\:]+$/u',
             'image'=>'image|mimes:jpeg,jpg,bmp,png,gif',
-            'location' => 'required|min:2|regex:/^[\pL\s\d]+$/u',
+            'location' => 'min:2|regex:/^[\pL\s\d\.\,\!\-\:]+$/u',
             'phone' => 'required|digits_between:7,10',
             'price' => 'regex:/^\d*(\.\d{2})?$/'
 		];
