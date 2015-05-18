@@ -14,22 +14,22 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Название</th>
-                                                            <th>Описание</th>
-                                                            <th>Местонахождение</th>
+                                                            {{--<th>Описание</th>--}}
+                                                            {{--<th>Местонахождение</th>--}}
                                                             <th>Цена/грн.</th>
                                                             <th>Дата</th>
-                                                            <th>Редактировать/Удалить</th>
+                                                            <th><i class="fa fa-pencil"></i></th>
                                                         </tr>
                                                     </thead>
 
                                                     <tfoot>
                                                         <tr>
                                                             <th>Название</th>
-                                                            <th>Описание</th>
-                                                            <th>Местонахождение</th>
+                                                            {{--<th>Описание</th>--}}
+                                                            {{--<th>Местонахождение</th>--}}
                                                             <th>Цена/грн.</th>
                                                             <th>Дата</th>
-                                                            <th>Редактировать/Удалить</th>
+                                                            <th><i class="fa fa-pencil"></i></th>
                                                         </tr>
                                                     </tfoot>
 
@@ -37,11 +37,11 @@
                                                     @foreach($user_ads as $ad)
                                                         <tr>
                                                             <td>{{$ad->title}}</td>
-                                                            <td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>
-                                                            <td>{{$ad->location}}</td>
+                                                            {{--<td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>--}}
+                                                            {{--<td>{{$ad->location}}</td>--}}
                                                             <td>{{$ad->price}}</td>
                                                             <td>{{Carbon::parse($ad->created_at)->format('d/m/Y')}}</td>
-                                                            <td><a href="{{action ('AdsController@show', [$ad->id])}}">Действие...</a></td>
+                                                            <td><a href="{{action ('AdsController@show', [$ad->id])}}"><i class="fa fa-pencil"></i></a></td>
                                                         </tr>
                                                      @endforeach
                                                     </tbody>
@@ -100,22 +100,22 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Название</th>
-                                                        <th>Описание</th>
-                                                        <th>Местонахождение</th>
+                                                        {{--<th>Описание</th>--}}
+                                                        {{--<th>Местонахождение</th>--}}
                                                         <th>Цена/грн.</th>
                                                         <th>Дата</th>
-                                                        <th>Просмотр</th>
+                                                        <th><i class="fa fa-eye"></i></th>
                                                     </tr>
                                                 </thead>
 
                                                 <tfoot>
                                                     <tr>
                                                         <th>Название</th>
-                                                        <th>Описание</th>
-                                                        <th>Местонахождение</th>
+                                                        {{--<th>Описание</th>--}}
+                                                        {{--<th>Местонахождение</th>--}}
                                                         <th>Цена/грн.</th>
                                                         <th>Дата</th>
-                                                        <th>Просмотр</th>
+                                                        <th><i class="fa fa-eye"></i></th>
                                                     </tr>
                                                 </tfoot>
 
@@ -124,11 +124,11 @@
                                                     <tr>
 
                                                         <td>{{$ad->title}}</td>
-                                                        <td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>
-                                                        <td>{{$ad->location}}</td>
+                                                        {{--<td>{!! Illuminate\Support\Str::words (html_entity_decode($ad->body), 20) !!}</td>--}}
+                                                        {{--<td>{{$ad->location}}</td>--}}
                                                         <td>{{$ad->price}}</td>
                                                         <td>{{Carbon::parse($ad->created_at)->format('d/m/Y')}}</td>
-                                                        <td><a href="{{action ('AdsController@show', [$ad->id])}}">Просмотреть...</a></td>
+                                                        <td><a href="{{action ('AdsController@show', [$ad->id])}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
                                                  @endforeach
                                                 </tbody>
