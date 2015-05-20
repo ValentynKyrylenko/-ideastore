@@ -41,7 +41,7 @@ return [
 	|
 	*/
 
-	'port' => env('MAIL_PORT', 587),
+	'port' => env('MAIL_PORT', 465),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'valentynmail@gmail.com', 'name' => 'Valentyn'],
+	'from' => ['address' => 'valentynmail@gmail.com', 'name' => 'Valentyn Kyrylenko'],
 
 	/*
 	|--------------------------------------------------------------------------
