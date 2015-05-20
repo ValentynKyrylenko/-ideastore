@@ -36,7 +36,7 @@
 	body {
         /*margin-top: 35px;*/
         /*background-image: url("http://localhost/laravel_1/public/media/background_images/seamless_paper_texture.png");*/
-        background-image: url( {{ URL::asset('media/background_images/seamless_paper_texture.png') }})
+        background-image: url( {{ URL::asset('media/background_images/tecstura_tonya.jpg') }})
     }
     hr {
         color: #bdc3c7; /*для IE */
