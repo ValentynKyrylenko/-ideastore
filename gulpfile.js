@@ -38,7 +38,7 @@ elixir(function(mix) {
         'libs/jquery-migrate-1.2.1.min.js',
         '../assets/bower/bootstrap/dist/js/bootstrap.js',
         'libs/jquery-ui.min.js',
-        '../../public/js/slick.min.js',
+        //'../../public/js/slick.min.js', //karusel
         'libs/select2.min.js',
         'libs/html5shiv.min.js',
         'libs/respond.min.js',
