@@ -35,22 +35,24 @@ $(document).ready(function() {
         $img.animate({opacity: 1}, 1000);
     }
 
-    $('html').on('click',function(evt) {
-        var $overlay = $('#overlay');
-        if (evt.target == $overlay.get(0)) {
-            $overlay.remove();
-        }
-    }); /** Light Box**/
+    /** Light Box**/
+    //$('html').on('click',function(evt) {
+    //    var $overlay = $('#overlay');
+    //    if (evt.target == $overlay.get(0)) {
+    //        $overlay.remove();
+    //    }
+    //});
+    //
+    //
+    //$('.slick_slide').slick({
+    //    dots: true,
+    //    speed: 500,
+    //    autoplay: true,
+    //    autoplaySpeed: 2000,
+    //    fade: true,
+    //    cssEase: 'linear'
+    //});
 
-
-    $('.slick_slide').slick({
-        dots: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        cssEase: 'linear'
-    });
     $('div.alert').delay(2500).slideUp(300);/** Flash massege**/
 
 
@@ -60,7 +62,6 @@ $(document).ready(function() {
 
     $('#accordion').accordion();/** Jquery UI**/
 
-    $('#accordion').accordion();/** Nice third party front page partial**/
 
     $('#example').DataTable();/** DataTables**/
 
