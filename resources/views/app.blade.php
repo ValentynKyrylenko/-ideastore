@@ -13,15 +13,26 @@
 
     <link rel="stylesheet" href="{{ asset(elixir("css/all.css")) }}">
     <link rel="stylesheet" href="{{ asset("css/box.css") }}">
+    {{--<link rel="stylesheet" href="{{ asset("css/data_table.css") }}">--}}
+
+
+
+
+
+
+
+
+
     {{--<script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>--}}
 
 
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--FOOTER STYLE-->
+	 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.7/integration/font-awesome/dataTables.fontAwesome.css"/>
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--FOOTER STYLE-->
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+    {{--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>--}}
+    {{--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>--}}
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

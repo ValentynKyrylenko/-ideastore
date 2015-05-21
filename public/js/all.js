@@ -11767,14 +11767,7 @@ $(document).ready(function() {
     }); /** Light Box**/
 
 
-    $('.slick_slide').slick({
-        dots: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        cssEase: 'linear'
-    });
+
     $('div.alert').delay(2500).slideUp(300);/** Flash massege**/
 
 

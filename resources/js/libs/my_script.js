@@ -63,7 +63,7 @@ $(document).ready(function() {
     $('#accordion').accordion();/** Jquery UI**/
 
 
-    $('#example').DataTable();/** DataTables**/
+    $('#data_table').DataTable();/** DataTables**/
 
         // handle jQuery plugin naming conflict between jQuery UI and Bootstrap
     $.widget.bridge('uibutton', $.ui.button);

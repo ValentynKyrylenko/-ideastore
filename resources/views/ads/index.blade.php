@@ -2,6 +2,20 @@
 
 @section('articles')
 {!! Breadcrumbs::render('ads') !!}
+<style>
+table.dataTable thead th.sorting:after {
+    content: "\f0dc";
+    color: #ddd;
+    font-size: 0.8em;
+    padding-top: 0.12em;
+}
+table.dataTable thead th.sorting_asc:after {
+    content: "\f0de";
+}
+table.dataTable thead th.sorting_desc:after {
+    content: "\f0dd";
+}
+</style>
 
 @if (count($user_ads))
 
@@ -96,7 +110,7 @@
 					<div class="panel-body">
                     					@if (count($ads))
                     					<!------------------------------------------------------------------------------->
-                    					<table id="example" class="display" cellspacing="0" width="100%">
+                    					<table id="data_table" class="display" cellspacing="0" width="100%">
                                                 <thead>
                                                     <tr>
                                                         <th>Название</th>
@@ -140,7 +154,10 @@
 
  </div>
 
+
 @endsection
+
+
 
 
 
