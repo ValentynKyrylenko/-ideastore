@@ -11727,7 +11727,7 @@ b});return h.fn.dataTable};"function"===typeof define&&define.amd?define("datata
  */
 $(document).ready(function() {
     /** Bootstrap image class**/
-    //$('img').not('.static').addClass('img-thumbnail')
+    //$('img').not('.static').addClass('img-thumbnail');
     /** Light Box**/
     $('.img-thumbnail').click(function(evt) {
         var imgPath, newImage;
