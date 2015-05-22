@@ -1,7 +1,11 @@
 @extends('app')
 
 @section('articles')
+<div class="row">
+<div class="col-md-12">
 {!! Breadcrumbs::render('edit_ad') !!}
+</div>
+</div>
 
 
 <div class="container">

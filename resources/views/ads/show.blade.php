@@ -1,6 +1,10 @@
 @extends('app')
 @section('articles')
+<div class="row">
+<div class="col-md-12">
 {!! Breadcrumbs::render('show_ad') !!}
+</div>
+</div>
 <div class="panel panel-info">
 				<div class="panel-heading"><h3>{{$ad->title}}</h3></div>
 				<div class="panel-body">
