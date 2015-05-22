@@ -1,30 +1,34 @@
 @extends('app')
 
 @section('articles')
-{!! Breadcrumbs::render('ads') !!}
-<style>
-table.dataTable thead th.sorting:after {
-    content: "\f0dc";
-    color: #ddd;
-    font-size: 0.8em;
-    padding-top: 0.12em;
-}
-table.dataTable thead th.sorting_asc:after {
-    content: "\f0de";
-}
-table.dataTable thead th.sorting_desc:after {
-    content: "\f0dd";
-}
-</style>
+                    <div class="row">
+                       <div class="col-md-12">
+                       {!! Breadcrumbs::render('ads') !!}
+                       </div>
+                    </div>
+
+{{--<style>--}}
+{{--table.dataTable thead th.sorting:after {--}}
+    {{--content: "\f0dc";--}}
+    {{--color: #ddd;--}}
+    {{--font-size: 0.8em;--}}
+    {{--padding-top: 0.12em;--}}
+{{--}--}}
+{{--table.dataTable thead th.sorting_asc:after {--}}
+    {{--content: "\f0de";--}}
+{{--}--}}
+{{--table.dataTable thead th.sorting_desc:after {--}}
+    {{--content: "\f0dd";--}}
+{{--}--}}
+{{--</style>--}}
+
 
 @if (count($user_ads))
-
 <button class="btn btn-primary" style="display: block; width: 100%;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   Ваши размещённые объявления (нажмите для продолжения)
 </button>
-<div class="collapse" id="collapseExample">
-  <div class="well">
-    <table class="table table-striped table-hover">
+  <div class="collapse" id="collapseExample">
+       <table class="table table-striped table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>Название</th>
@@ -59,9 +63,8 @@ table.dataTable thead th.sorting_desc:after {
                                                         </tr>
                                                      @endforeach
                                                     </tbody>
-                                                </table>
+       </table>
   </div>
-</div>
 @endif
 
 <!--------------------------------------------------------Объявления мастеров----------------------------------------------------------->
@@ -72,6 +75,7 @@ table.dataTable thead th.sorting_desc:after {
        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
          Разместить объявление
        </button>
+
 
        <!-- Modal -->
     <div id="myModal" class="modal fade">
@@ -91,7 +95,7 @@ table.dataTable thead th.sorting_desc:after {
                           </div>
                       </div>
                   </div>
-              </div>
+    </div>
 
               <span class="btn-group">
                 <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -101,12 +105,12 @@ table.dataTable thead th.sorting_desc:after {
                   @foreach($tagads as $tag)
                   <li><a href="{{action ('TagadsController@show', [$tag->name])}}">{{$tag->name}}</a></li>
                   @endforeach
-
                 </ul>
               </span>
+              </div>
 
 	   <!--------------------------------------------------------------------------->
-	   </div>
+
 					<div class="panel-body">
                     					@if (count($ads))
                     					<!------------------------------------------------------------------------------->
@@ -151,11 +155,10 @@ table.dataTable thead th.sorting_desc:after {
                     					@endif
 
 			        </div>
-
+ </div>
  </div>
 
-
-@endsection
+ @endsection
 
 
 

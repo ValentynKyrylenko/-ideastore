@@ -60,8 +60,6 @@ $(document).ready(function() {
 
     $('select').select2();
 
-    $('#accordion').accordion();/** Jquery UI**/
-
 
     $('#data_table').DataTable();/** DataTables**/
 

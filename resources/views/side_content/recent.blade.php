@@ -1,4 +1,5 @@
-<div class="col-md-4"> <div div class="panel panel-primary">
+<div class="col-md-4">
+<div div class="panel panel-primary">
  <div class="panel-heading">
      <i class="fa fa-bell fa-lg" class="panel-title">  Последние мастер-классы</i>
  </div>
@@ -9,4 +10,5 @@
   @endforeach
 </ul>
  </div>
-</div></div> <!--2 Block END-->
+</div>
+</div> <!--2 Block END-->

@@ -1,8 +1,14 @@
 @extends('app')
 @section('articles')
+<div class="row">
+<div class="col-md-12">
 {!! Breadcrumbs::render('articles') !!}
+</div>
+</div>
+
 
  @if (count($articles))
+ <div class="row">
         <ul>
         @foreach($articles as $article)
                 <div class="col-xs-12 col-sm-6 col-lg-4">
@@ -26,8 +32,10 @@
                         </div>
                 </div>
         @endforeach
-                    					</ul>
+                 </ul>
+        </div>
         @endif
+
  @endsection
 
 

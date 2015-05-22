@@ -1,0 +1,80 @@
+/*body {*/
+    /*margin-top: 35px;*/
+    /*background-image: url("http://localhost/laravel_1/public/media/background_images/seamless_paper_texture.png");*/
+    /*background-image: url( {{ URL::asset('media/background_images/tecstura_tonya.jpg') }})*/
+/*}*/
+
+/*.slick-slide {*/
+    /*text-align: center;*/
+/*}*/
+
+/*.slick-slide::before {*/
+    /*content: '';*/
+    /*display: inline-block;*/
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+/*}*/
+
+/*.slick-slide img {*/
+    /*vertical-align: middle;*/
+    /*display: inline-block;*/
+    /*width: 100%;*/
+/*}*/
+
+
+
+
+
+
+.ideastore {
+    font-weight: 100;
+    font-size: 28px;
+    font-family: 'Lato';
+}
+
+
+
+/*Typography*/
+.middle_headline {font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;color: #444;
+}
+
+
+
+.paragraph{font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #444;}
+
+
+
+.large_headline{     font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 48px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #444;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: 100;}
+/*Links*/
+a:link {color: #CA6924; text-decoration: none; }
+a:active {color: #8DB255; text-decoration: underline; }
+a:visited {color: #95A5A6; text-decoration: underline; }
+a:hover {color: #757D75; text-decoration: none; }
+
+/*Стиль для рисунка на заставку на главной странице сайта*/
+.home_page_bg_image img {
+    width: 100%; height: 100%;
+}
+
+.row {
+    margin-left: -20px;
+    *zoom: 1;
+    margin-top: 15px;
+}
+/*----------------------------------------------------------*/
+
+.carousel-indicators li { visibility: hidden; }

@@ -1,10 +1,11 @@
 @extends('app')
 @section('articles')
-
+<div class="row">
+<div class="col-md-12">
 {!! Breadcrumbs::render('home') !!}
+</div>
+</div>
 
-
-     <div class="container">
          <div class="row">
                     <div class="col-md-12">
                              @include('partials._homePageBlock')
@@ -22,6 +23,6 @@
                           </div>
                  </div>
          </div>
-     </div>
+
 
 @endsection
