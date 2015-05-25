@@ -6,11 +6,11 @@
 
   <!-- Wrapper for slides -->
          <div class="carousel-inner fullheight">
-            <div class="item"><img src={{ URL::asset('media/banner/1600.jpg') }} alt="Main"></div>
+            <div class="item"><img src={{ URL::asset('media/banner/banner-glaza.jpg') }} alt="Main"></div>
 
-            <div class="item"><img src={{ URL::asset('media/banner/1600.jpg') }} alt="Second"></div>
+            <div class="item"><img src={{ URL::asset('media/banner/banner-glaza.jpg') }} alt="Second"></div>
 
-            <div class="item"><img src={{ URL::asset('media/banner/1600.jpg') }} alt="Third"></div>
+            <div class="item"><img src={{ URL::asset('media/banner/banner-glaza.jpg') }} alt="Third"></div>
          </div>
 
   <!-- Left and right controls -->
