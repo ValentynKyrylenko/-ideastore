@@ -73,5 +73,7 @@
                 @include('partials._footer')
             </footer><!--Footer contents-->
             @include('partials._jsLinks')
+
+
 </body>
 </html>
