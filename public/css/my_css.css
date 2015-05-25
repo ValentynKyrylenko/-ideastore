@@ -104,7 +104,7 @@ a:hover {color: #757D75; text-decoration: none; }
 .carousel-control .left {
     background-image: none;
 }
-#feadured .item{
+#featured .item{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
