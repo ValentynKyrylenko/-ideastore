@@ -11777,7 +11777,7 @@ $(document).ready(function() {
     //------------------------------------------------------Carusel---------------------------------------//
     var topoffset = 50; //variable for menu height
     var slideqty = $('#featured .item').length;
-    var wheight = $(window).height(); //get the height of the window
+    var wheight = $(window).height()/2.5; //get the height of the window
     var randSlide = Math.floor(Math.random()*slideqty);
 
     $('#featured .item').eq(randSlide).addClass('active');
@@ -11795,7 +11795,7 @@ $(document).ready(function() {
 
     //adjust height of .fullheight elements on window resize
     $(window).resize(function() {
-        wheight = $(window).height(); //get the height of the window
+        wheight = $(window).height()/2.5; //get the height of the window
         $('.fullheight').css('height', wheight); //set to window tallness
     });
 

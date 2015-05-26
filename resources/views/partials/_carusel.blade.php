@@ -1,3 +1,4 @@
+
  <div class="carousel fade" data-ride="carousel" id ="featured">
   <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -23,4 +24,5 @@
 
           </a>
  </div>
+
 
