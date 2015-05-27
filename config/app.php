@@ -139,6 +139,7 @@ return [
         'DaveJamesMiller\Breadcrumbs\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Roumen\Sitemap\SitemapServiceProvider',
+        'Riari\Forum\ForumServiceProvider',
 
 
 		/*

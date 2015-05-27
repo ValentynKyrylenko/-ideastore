@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "294c7c0e13d27bd716644b1622e6be9b",
+    "hash": "c9553e7e0273163ec3dd047b00f8b0a9",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1530,6 +1530,53 @@
                 "shell"
             ],
             "time": "2015-03-26 18:43:54"
+        },
+        {
+            "name": "riari/laravel-forum",
+            "version": "2.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Riari/laravel-forum.git",
+                "reference": "3ffcce450d1b4f0ca68218d0a35d63e010e1512a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Riari/laravel-forum/zipball/3ffcce450d1b4f0ca68218d0a35d63e010e1512a",
+                "reference": "3ffcce450d1b4f0ca68218d0a35d63e010e1512a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Riari\\Forum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Riari",
+                    "email": "hello@ricko.me"
+                }
+            ],
+            "description": "A complete forum package designed for easy integration into any Laravel 4/5 application",
+            "keywords": [
+                "discuss",
+                "forum",
+                "laravel",
+                "laravel-4",
+                "laravel-5"
+            ],
+            "time": "2015-05-26 17:29:26"
         },
         {
             "name": "roumen/sitemap",
