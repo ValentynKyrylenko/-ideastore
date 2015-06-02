@@ -33,7 +33,7 @@ section h3 {
 
 
 .inset h2 {
-	color: white;
+	color: darkslategrey;
 	font-family: Arial, Helvetica, sans-serif;
 	font-variant: normal;
 	font-weight: normal;
@@ -73,13 +73,14 @@ section h3 {
 </style>
 
 
-
+<div class="col-md-4">
    <section class="inset border-radius">
-       <h2>Направления творчества</h2>
+       <h2>Творчество</h2>
                <ul>
                  @foreach($tags as $tag)
                  <li><a href="{{action ('TagsController@show', [$tag->name])}}" >{{$tag->name}}</a></li>
                  @endforeach
                </ul>
    </section>
+   </div>
 
