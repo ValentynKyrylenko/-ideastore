@@ -17,6 +17,7 @@
 					<li><a href="{{ url('/articles') }}"><i class="fa fa-comment fa-lg"> Мастер-классы</i></a></li>
 					<li><a href="{{ url('/events') }}"><i class="fa fa-bullhorn fa-lg"> Новости</i></a></li>
 					<li><a href="{{ url('/charity') }}"><i class="fa fa-child fa-lg"> Благотворительность</i></a></li>
+					<li><a href="{{ url('/ads') }}"><i class="fa fa-binoculars fa-lg"> Объявления</i></a></li>
 
 					<!-------------------------------------ADMIN----------------------------------------------------->
                                               @include('partials._adminMenu')
