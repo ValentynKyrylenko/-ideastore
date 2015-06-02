@@ -55,15 +55,15 @@
                        </div>
             </div>
 
-             <div class="container-fluid">
-                       <div class="row">
-                                   <div class="col-md-12">
-                                      @include('side_content.products')
-                                      @include('side_content.tags')
-                                      @include('side_content.recent')
-                                   </div>
-                       </div>
-             </div>
+             {{--<div class="container-fluid">--}}
+                       {{--<div class="row">--}}
+                                   {{--<div class="col-md-12">--}}
+                                      {{--@include('side_content.products')--}}
+                                      {{--@include('side_content.tags')--}}
+                                      {{--@include('side_content.recent')--}}
+                                   {{--</div>--}}
+                       {{--</div>--}}
+             {{--</div>--}}
 
 
 
