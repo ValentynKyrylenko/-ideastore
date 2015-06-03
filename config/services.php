@@ -33,5 +33,10 @@ return [
 		'model'  => 'User',
 		'secret' => '',
 	],
+    'facebook' => [
+        'client_id' => '1630561443822294',
+        'client_secret' => '28e9e0810c27848709cedf2a8dff4bc3',
+        'redirect' => 'http://localhost/laravel_1/public/auth/login/fb',
+    ],
 
 ];

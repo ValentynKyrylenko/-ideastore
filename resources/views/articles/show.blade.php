@@ -11,6 +11,13 @@
 				<div class="well well-sm">
 				<article>
 				{!!html_entity_decode($article->body)!!}
+				</br>
+				<div
+                  class="fb-like"
+                  data-send="true"
+                  data-width="450"
+                  data-show-faces="true">
+                </div>
 				</article>
 @unless($article->tags->isEmpty())
 				<h5>Статья находится в рубрике:</h5>

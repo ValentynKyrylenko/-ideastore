@@ -53,6 +53,7 @@ Route::resource('products', 'ProductsController', array('names' => array('index'
 
 Route::resource('ads', 'AdsController', array('names' => array('index' => 'ads', 'show' => 'show_ad', 'edit' => 'edit_ad', 'create' => 'create_ad')));
 
+Route::get('login/{provider?}', 'Auth\AuthController@login');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
