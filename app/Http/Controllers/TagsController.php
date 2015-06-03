@@ -8,7 +8,8 @@ class TagsController extends Controller {
 
 	public function show(Tag $tag)
     {
-       $articles = $tag->articles()->published()->get();
+        $articles = $tag->articles()->published()->paginate(6);
+        $articles->setPath('/laravel_1/public/tags/' . $tag->name);
         return view('articles.index', compact('articles'));
     }
 

@@ -33,8 +33,9 @@
                 </div>
         @endforeach
                  </ul>
-        </div>
-        @endif
+ </div>
+ <?php echo $articles->render(); ?>
+ @endif
 
  @endsection
 

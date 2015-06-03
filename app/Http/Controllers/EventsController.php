@@ -25,7 +25,8 @@ class EventsController extends Controller {
 
 	public function index()
 	{
-        $events = Event::latest('published_at')->published()->get();
+        $events = Event::latest('published_at')->published()->paginate(6);
+        $events->setPath('/laravel_1/public/events');
         return view ('events.index', compact('events'));
 	}
 

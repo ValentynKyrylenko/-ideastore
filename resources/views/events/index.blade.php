@@ -32,5 +32,6 @@
          @endforeach
       </ul>
       </div>
+       <?php echo $events->render(); ?>
  @endif
      @endsection
