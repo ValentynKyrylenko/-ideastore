@@ -9,7 +9,7 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
 	use Authenticatable, CanResetPassword;
-    use SammyK\LaravelFacebookSdk\SyncableGraphNodeTrait;
+
 
 	/**
 	 * The database table used by the model.
@@ -17,9 +17,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var string
 	 */
 	protected $table = 'users';
-    protected static $graph_node_field_aliases = [
-        'id' => 'facebook_user_id',
-    ];
+
 
 	/**
 	 * The attributes that are mass assignable.
