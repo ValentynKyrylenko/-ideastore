@@ -76,7 +76,9 @@ a:hover {color: #757D75; text-decoration: none; }
     margin-top: 15px;
 }
 /*----------------------------Карусель--------------------------*/
-
+.carousel .carousel-control { visibility: hidden; }
+.carousel:hover .carousel-control { visibility: visible; }
+.carousel-indicators li { visibility: hidden; }
 /**  Basic Page CSS **/
 body{
     font-family: "Roboto Slab", sans-serif;
@@ -169,7 +171,7 @@ and (max-width: 768px) {
 /**  nav inbody **/
 
 header .inbody {
-    background: rgba(104,73,49,.9);
+    background: rgba(96,181,190,.6);
 }
 
 header .navbar.inbody {
@@ -403,42 +405,5 @@ and (max-width: 768px) {
 
 /**  Footer **/
 
-footer {
-    background: #586D74;
-    color: white;
-    font-size: .8em;
-    padding: 20px 0 40px 0;
-}
 
-footer a {
-    color: #E0E6AE;
-}
-
-footer a:hover {
-    color: #EEC856 !important;
-}
-
-footer .phone {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #E0E6AE;
-}
-
-footer .navbar {
-    margin-bottom: 0;
-    min-height: 0;
-}
-
-footer .navbar-default {
-    background-color: transparent;
-    border: none;
-    margin-right: 40px;
-}
-
-footer .navbar-nav>li a {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-decoration: underline;
-    color: #EEC856 !important;
-}
 

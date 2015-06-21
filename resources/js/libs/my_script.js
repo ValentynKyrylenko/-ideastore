@@ -143,7 +143,8 @@ $(document).ready(function() {
     }
 
     $('.carousel').carousel({
-        pause: false
+        pause: false,
+        interval: false
     });
 
 
