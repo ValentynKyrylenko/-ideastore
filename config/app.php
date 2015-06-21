@@ -140,6 +140,7 @@ return [
         'Intervention\Image\ImageServiceProvider',
         'Roumen\Sitemap\SitemapServiceProvider',
         'Riari\Forum\ForumServiceProvider',
+        'SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider',
 
 
 		/*
@@ -204,6 +205,8 @@ return [
         'Carbon'    => 'Carbon\Carbon',
         'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
         'Image' => 'Intervention\Image\Facades\Image',
+        'Facebook' => 'SammyK\LaravelFacebookSdk\FacebookFacade',
+
 
 	],
 

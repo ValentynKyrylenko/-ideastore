@@ -11,6 +11,14 @@
                             <div class="well well-sm">
                                         <article>
                                         {!!html_entity_decode($event->body)!!}
+                                        </br>
+                                        				{{--<div--}}
+                                                          {{--class="fb-like"--}}
+                                                          {{--data-send="true"--}}
+                                                          {{--data-width="450"--}}
+                                                          {{--data-show-faces="true">--}}
+                                                        {{--</div>--}}
+                                                         <div class="addthis_sharing_toolbox"></div>
                                         </article>
                                               <nav>
                                                   <ul class="pager">

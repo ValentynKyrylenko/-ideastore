@@ -11,6 +11,14 @@
                                         <article>
                                         <div class="well well-sm">
                                         {!!html_entity_decode($product->body)!!}
+                                        </br>
+                                        				{{--<div--}}
+                                                          {{--class="fb-like"--}}
+                                                          {{--data-send="true"--}}
+                                                          {{--data-width="450"--}}
+                                                          {{--data-show-faces="true">--}}
+                                                        {{--</div>--}}
+                                                         <div class="addthis_sharing_toolbox"></div>
                                          </div>
                                         <span class="label label-primary">
                                         Цена: {!!html_entity_decode($product->price)!!} грн.

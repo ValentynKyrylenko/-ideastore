@@ -25,7 +25,8 @@ class ProductsController extends Controller {
 
 	public function index()
 	{
-        $products = Product::latest('published_at')->published()->get();
+        $products = Product::latest('published_at')->published()->paginate(6);
+        $products->setPath('/laravel_1/public/products');
         return view ('products.index', compact('products'));
 	}
 

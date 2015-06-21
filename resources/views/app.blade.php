@@ -34,6 +34,29 @@
 
 
  <body>
+
+ <script>
+   window.fbAsyncInit = function() {
+     FB.init({
+       appId      : '1583033781970843',
+       xfbml      : true,
+       version    : 'v2.3'
+     });
+   };
+
+   (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+ </script>
+
+ <!-- Go to www.addthis.com/dashboard to customize your tools -->
+ <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-557041ee035f4750" async="async"></script>
+
+
            <header>
                    @include('partials._carusel')
                    @include('partials._navigation')

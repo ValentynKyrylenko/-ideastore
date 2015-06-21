@@ -6,6 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.0.*",
+        "sammyk/laravel-facebook-sdk": "~2.0@dev",
+        "facebook/php-sdk-v4": "~5.0@dev",
 		"illuminate/html": "~5.0",
 		"doctrine/dbal": "~2.5",
 		"laracasts/flash": "~1.3",
